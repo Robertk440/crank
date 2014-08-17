@@ -1,0 +1,23 @@
+//# Button
+// Those things you click
+.button
+	{
+		@extend %appearance-none;
+		@extend %block;
+		@extend %display-table;
+
+		background:transparent;border:0;padding:0;
+
+		//% Elem
+		&__title
+			{
+				@extend %display-table-cell;
+				@extend %vertical-align-middle;
+			}
+
+		&__visual
+			{
+				@extend %display-table-cell;
+			}
+		//%
+	}

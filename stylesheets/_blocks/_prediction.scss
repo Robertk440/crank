@@ -1,0 +1,48 @@
+//# Prediction
+.prediction
+	{
+		//% Nodes
+		&-main
+			{
+				&-data
+					{
+						@extend .list-vertical;
+
+						margin:0;
+
+						.row
+							{
+								margin:{top:5px;};
+							}
+
+						&-enclosure
+							{
+								@extend %background-color-dark-grey;
+
+								margin:{top:10px;};padding:10px 20px;
+
+								&:first-child{margin:{top:0;};}
+
+								&__title
+									{
+										@extend %font-common-bold;
+										@extend %display-block;
+										@extend %text-align-left;
+
+										&--sub
+											{
+												@extend %display-block;
+												@extend %text-align-left;
+											}
+
+										&--tertiary
+											{
+												@extend %display-block;
+												@extend %text-align-right;
+											}
+									}
+							}
+					}
+			}
+		//%
+	}

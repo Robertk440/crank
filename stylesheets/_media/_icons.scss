@@ -1,0 +1,14 @@
+//# Icons
+.icon
+	{
+		@each $icon in $icons-files
+			{
+				&.#{$icon}
+					{
+						@extend %display-block;
+						@extend %media;
+						@extend %text-hide;
+						@include spritee($icon,$icons,$icons2x);
+					}
+			}
+	}

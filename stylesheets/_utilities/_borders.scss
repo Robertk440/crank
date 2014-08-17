@@ -1,0 +1,22 @@
+//# Borders
+.util
+	{
+		&.border
+			{
+				&-circle
+					{
+						border-radius:50%;
+					}
+
+				&-radius
+					{
+						@each $i in $borders
+							{
+								&-#{$i}
+									{
+										border-radius:add-unit-type($i);
+									}
+							}
+					}
+			}
+	}

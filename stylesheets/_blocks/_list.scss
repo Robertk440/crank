@@ -1,0 +1,52 @@
+//# List
+//% General lists, used for anything from navigation to data
+.list
+	{
+		//% Blocks
+		&-horizontal
+			{
+				@extend %block;
+				@extend %display-block;
+				@extend %list-style-none;
+				@extend %reset-spacing;
+
+				margin:0;padding:0;
+
+				//% Nodes
+				&-enclosure
+					{
+						@extend %display-inline-block;
+
+						&-item
+							{
+								@extend %display-block;
+							}
+					}
+				//%
+			}
+
+		&-vertical
+			{
+				@extend %block;
+				@extend %display-block;
+				@extend %list-style-none;
+				@extend %reset-spacing;
+
+				margin:0;padding:0;
+
+				//% Nodes
+				&-enclosure
+					{
+						//% Nodes
+						&-item
+							{
+								@extend %element;
+								@extend %display-block;
+							}
+						//%
+					}
+				//%
+			}
+		//%
+	}
+//%

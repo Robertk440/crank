@@ -1,0 +1,54 @@
+//# Definition list
+// Often used as term and definition
+.definition-list
+	{
+		@extend %block;
+
+		//% Nodes
+		&-horizontal
+			{
+				@extend %display-block;
+				@extend %list-style-none;
+				@extend %reset-spacing;
+
+				margin:0;padding:0;
+
+				//% Nodes
+				&-term,&-data
+					{
+						@extend %display-inline-block;
+
+						//% Nodes
+						&-item
+							{
+								@extend %display-block;
+							}
+						//%
+					}
+				//%
+			}
+
+		&-vertical
+			{
+				@extend %display-block;
+				@extend %list-style-none;
+				@extend %reset-spacing;
+
+				margin:0;padding:0;
+
+				//% Nodes
+				&-term,&-data
+					{
+						//% Nodes
+						&-item
+							{
+								@extend %element;
+								@extend %display-block;
+							}
+						//%
+					}
+				//%
+			}
+		//%
+	}
+//%

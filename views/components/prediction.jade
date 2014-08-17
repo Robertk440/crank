@@ -1,0 +1,65 @@
+.prediction-main
+
+	ul.prediction-main-data
+
+		li.prediction-main-data-enclosure(ng-repeat="day in days")
+
+			.row
+
+				.column-large-50.column-small-50
+
+					span.prediction-main-data-enclosure__title
+						| {{day.dt*1000|date:"EEEE"}}
+
+				//-@.column
+
+				.column-large-50-2.column-small-50-2
+
+					span.prediction-main-data-enclosure__title--tertiary
+						| {{day.weather[0].main}}
+
+				//-@.column
+
+			//-@.row
+
+			.row
+
+				.column-large-50.column-small-50
+
+					span.prediction-main-data-enclosure__title--sub
+						| Temp (Min)
+
+				//-@.column
+
+				.column-large-50-2.column-small-50-2
+
+					span.prediction-main-data-enclosure__title--tertiary
+						| {{day.temp.min+"&deg;C"}}
+
+				//-@.column
+
+			//-@.row
+
+			.row
+
+				.column-large-50.column-small-50
+
+					span.prediction-main-data-enclosure__title--sub
+						| Temp (Max)
+
+				//-@.column
+
+				.column-large-50-2.column-small-50-2
+
+					span.prediction-main-data-enclosure__title--tertiary
+						| {{day.temp.max+"&deg;C"}}
+
+				//-@.column
+
+			//-@.row
+
+		//-@.enclosure
+
+	//-@.list
+
+//-@.prediction-main

@@ -1,0 +1,27 @@
+//# Table
+table,.table
+	{
+		@extend %block;
+		@include table-scaffolding;
+
+		//% Nodes
+		tbody,.content
+			{
+				th,td
+					{
+						@extend %text-align-left;
+
+						padding:0;
+					}
+			}
+
+		thead,.header
+			{
+				th
+					{
+						@extend %text-align-left;
+
+						padding:0;
+					}
+			}
+	}

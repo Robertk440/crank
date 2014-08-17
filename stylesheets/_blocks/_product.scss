@@ -1,0 +1,88 @@
+//# Product
+// The core layout for the product, the product is the application as a whole
+.product
+	{
+		@extend %block;
+
+		margin:{left:auto;right:auto;};max-width:map-get($product,max-width);
+
+		//% Nodes
+		&-header
+			{
+				margin:{bottom:20px;};
+
+				//% Nodes
+				&__title
+					{
+						@extend %font-heading-light;
+						@extend %display-block;
+						@extend %text-align-center;
+						@extend %user-select-none;
+						@include adjust-font-size-to(50px);
+						@include adjust-leading-to(2);
+
+						//% Mods
+						&-sub
+							{
+								@extend %display-block;
+								@extend %text-align-center;
+								@extend %position-relative;
+								@extend %user-select-none;
+								@include adjust-font-size-to(16px);
+								@include adjust-leading-to(1);
+
+								margin:{top:5px;};padding:10px;
+							}
+						//%
+					}
+				//%
+			}
+
+		&-main
+			{
+
+			}
+
+		&-navigation
+			{
+				margin:{bottom:40px;};
+
+				//% Nodes
+				&-list
+					{
+						@extend .list-horizontal;
+
+						&-enclosure
+							{
+								@extend .list-horizontal-enclosure;
+
+								margin:{left:50px;};
+
+								&:first-child{margin:{left:0;};}
+
+								&-item
+									{
+										@extend .list-horizontal-enclosure-item;
+										@extend %foreground-color-medium-grey;
+										@extend %font-common-light;
+										@extend %text-align-center;
+										@include adjust-font-size-to(32px);
+										@include adjust-leading-to(1);
+									}
+
+								//% Mods
+								&.active
+									{
+										.product-navigation-list-enclosure-item
+											{
+												@extend %foreground-color-clarity;
+												@extend %font-common-light;
+											}
+									}
+								//%
+							}
+					}
+				//%
+			}
+		//%
+	}

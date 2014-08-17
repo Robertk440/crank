@@ -1,0 +1,6 @@
+//# Add Unit Type
+// Need to add a "px" unit or a "%" to some calculation? This can help
+@function add-unit-type($argument:0,$unit:"px")
+	{
+		@return(unquote($argument + $unit));
+	}

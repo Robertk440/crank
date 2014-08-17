@@ -1,0 +1,13 @@
+//# Spin
+@include keyframes("spin")
+	{
+		from
+			{
+				@include rotate(30deg);
+			}
+
+		to
+			{
+				@include rotate(0deg);
+			}
+	}

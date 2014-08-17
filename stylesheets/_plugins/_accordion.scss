@@ -1,0 +1,19 @@
+//# Accordion
+.accordion
+	{
+		@extend %background-color-clarity;
+
+		//% Block
+		&-header
+			{
+				@extend %background-color-regular-grey;
+
+				padding:10px;
+			}
+
+		&-main
+			{
+				padding:10px;
+			}
+		//%
+	}

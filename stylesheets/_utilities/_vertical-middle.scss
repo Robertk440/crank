@@ -1,0 +1,24 @@
+//# Vertical Middle
+// Make sure this is applied to a parent and block class gets applied to a child
+.util
+	{
+		&.vertical-middle
+			{
+				//% Nodes
+				&:before
+					{
+						@extend %content-none;
+						@extend %display-inline-block;
+						@extend %vertical-align-middle;
+
+						height:100%;margin:{right:-0.25em;};
+					}
+
+				&-block
+					{
+						@extend %display-inline-block;
+						@extend %vertical-align-middle;
+					}
+				//%
+			}
+	}

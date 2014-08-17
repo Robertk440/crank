@@ -1,0 +1,91 @@
+//# Padding
+// These are handy to modify one of modules that just need a small change
+// that doesn't warrant a modified module. The classes generated are based on
+// config/utilities
+.util
+	{
+		&.padding
+			{
+				//% Nodes
+				&-auto{padding:auto;}
+				//%
+
+				@each $i in $paddings
+					{
+						//% Nodes
+						&-#{$i}
+							{
+								padding:add-unit-type($i);
+							}
+						//%
+					}
+
+				&-bottom
+					{
+						//% Nodes
+						&-auto{padding:{bottom:auto;};}
+						//%
+
+						@each $i in $paddings
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										padding:{bottom:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+
+				&-left
+					{
+						//% Nodes
+						&-auto{padding:{left:auto;};}
+						//%
+
+						@each $i in $paddings
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										padding:{left:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+
+				&-right
+					{
+						//% Nodes
+						&-auto{padding:{right:auto;};}
+						//%
+
+						@each $i in $paddings
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										padding:{right:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+
+				&-top
+					{
+						//% Nodes
+						&-auto{padding:{top:auto;};}
+						//%
+
+						@each $i in $paddings
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										padding:{top:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+			}
+	}

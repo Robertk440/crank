@@ -1,0 +1,14 @@
+//# Document
+// The basic structure of the site, block level elements
+html
+	{
+		@extend %background-color-pitch;
+
+		overflow-x:hidden;
+	}
+
+body
+	{
+		padding:30px 20px;
+	}
+//

@@ -1,0 +1,21 @@
+//# Floats
+.util
+	{
+		&.float
+			{
+				&-left
+					{
+						@extend %float-left;
+					}
+
+				&-reset
+					{
+						@extend %reset-float;
+					}
+
+				&-right
+					{
+						@extend %float-right;
+					}
+			}
+	}

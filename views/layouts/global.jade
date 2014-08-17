@@ -1,0 +1,102 @@
+include /functions/variables
+
+block vars
+
+include /functions/mixins
+
+doctype html
+
+html(class="no-js",lang="en")
+
+	meta(content="IE=edge,chrome=1",http-equiv="X-UA-Compatible")
+
+	title=product.title
+
+	meta(charset="utf-8")
+
+	meta(content="#",name="description")
+	meta(content="#",name="author")
+
+	//-Mobile Viewport Scaling
+	meta(content="True",name="HandheldFriendly")
+	meta(content="320",name="MobileOptimized")
+	meta(content="width=device-width,initial-scale=1",name="viewport")
+	meta(content="no",name="user-scalable")
+	meta(content="on",http-equiv="cleartype")
+
+	//-Apple Convention Specifics
+	meta(content="yes",name="apple-mobile-web-app-capable")
+	meta(content="black",name="apple-mobile-web-app-status-bar-style")
+	meta(content=product.title,name="apple-mobile-web-app-title")
+
+	//-Microsoft Convention Specifics
+	meta(content=product.title,name="application-name")
+	meta(content="/browser/msapplication.xml",name="msapplication-config")
+
+	//-Icons
+	link(href="touch.png",rel="shortcut icon")
+
+	//-LoadCSS
+	script(type="text/javascript").
+		/*!
+			loadCSS: load a CSS file asynchronously.
+			[c]2014 @scottjehl, Filament Group, Inc.
+			Licensed MIT
+		*/
+
+		function loadCSS(href,before)
+			{
+				"use strict";
+
+				// Arguments explained:
+				// `href` is the URL for your CSS file.
+				// `before` optionally defines the element we'll use as a reference for injecting our <link>
+				// By default, `before` uses the first <script> element in the page.
+				// However, since the order in which stylesheets are referenced matters, you might need a more specific location in your document.
+				// If so, pass a different reference element to the `before` argument and it'll insert before that instead
+				// note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+				var ss=window.document.createElement("link");
+				var ref=before||window.document.getElementsByTagName("script")[0];
+				ss.rel="stylesheet";
+				ss.href=href;
+
+				// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
+				ss.media="only x";
+
+				// inject link
+				ref.parentNode.insertBefore(ss,ref);
+
+				// set media back to `all` so that the styleshet applies once it loads
+				setTimeout(function()
+					{
+						ss.media="all";
+					}
+				);
+			}
+
+		loadCSS("/stylesheets/style.css");
+
+	//-Require JS
+	script(data-main="/scripts/load.js",src="/dependencies/requirejs/require.js")
+
+	//-Live Reload
+	script.
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+
+	body
+
+		.product
+
+			nav.product-navigation(product-navigation)
+
+			main.product-main.rich-text
+
+				.product-content
+
+					block content
+
+				//-@.content
+
+			//-@.main
+
+		//-@.product

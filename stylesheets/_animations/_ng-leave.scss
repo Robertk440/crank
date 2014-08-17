@@ -1,0 +1,10 @@
+//# Ng Leave
+.ng-leave
+	{
+		@include transition(opacity 0.5s ease-out);
+	}
+
+.ng-scope
+	{
+		@include transition(opacity 0.5s ease-out);
+	}

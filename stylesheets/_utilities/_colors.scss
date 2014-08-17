@@ -1,0 +1,31 @@
+//# Colors
+.util
+	{
+		&.background
+			{
+				&-color
+					{
+						@each $color-name,$color-value in $colors
+							{
+								&-#{$color-name}
+									{
+										@include contrasted($color-value,$dark,$light);
+									}
+							}
+					}
+			}
+
+		&.foreground
+			{
+				&-color
+					{
+						@each $color-name,$color-value in $colors
+							{
+								&-#{$color-name}
+									{
+										color:$color-value;
+									}
+							}
+					}
+			}
+	}

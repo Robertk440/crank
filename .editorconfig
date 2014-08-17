@@ -1,0 +1,9 @@
+# EditorConfig
+
+# top-most EditorConfig file
+root=true
+
+# Indentation
+[*.js,*.jade,*.html,*.scss,*.json,*.coffee,*.md]
+indent_style=tab
+indent_size=4

@@ -1,0 +1,59 @@
+//# Breakpoints
+// Simpler way to reference your breakpoints with a set of presets
+// as well as simple syntax to create new specific breakpoints!
+// The limit accepts min or max so you can set a min-width or max-width breakpoint,
+// the width is self explanatory and if you want to use the built in defaults
+// reference them (large, medium, or small constraints) in the last variable and
+// set the other two to 0.
+@mixin breakpoint($breakpoint-preset:0,$breakpoint-max-width:0,$breakpoint-min-width:0,
+	$breakpoint-name:"breakpoint-#{$breakpoint-max-width}-#{$breakpoint-min-width}")
+	{
+		@if($breakpoint-preset=="none")
+			{
+				@media(max-width:$breakpoint-max-width) and (min-width:$breakpoint-min-width)
+					{
+						@include breakpoint-settings($breakpoint-settings-name:$breakpoint-name);
+
+						@content;
+					}
+			}
+		@elseif($breakpoint-preset=="large")
+			{
+				$breakpoint-max-width:125em;
+				$breakpoint-min-width:60em;
+				$breakpoint-name:"large";
+
+				@media(max-width:$breakpoint-max-width)and(min-width:$breakpoint-min-width)
+					{
+						@include breakpoint-settings($breakpoint-settings-name:$breakpoint-name);
+
+						@content;
+					}
+			}
+		@elseif($breakpoint-preset=="medium")
+			{
+				$breakpoint-max-width:60em;
+				$breakpoint-min-width:48em;
+				$breakpoint-name:"medium";
+
+				@media(max-width:$breakpoint-max-width)and(min-width:$breakpoint-min-width)
+					{
+						@include breakpoint-settings($breakpoint-settings-name:$breakpoint-name);
+
+						@content;
+					}
+			}
+		@elseif($breakpoint-preset=="small")
+			{
+				$breakpoint-max-width:48em;
+				$breakpoint-min-width:20em;
+				$breakpoint-name:"small";
+
+				@media(max-width:$breakpoint-max-width)and(min-width:$breakpoint-min-width)
+					{
+						@include breakpoint-settings($breakpoint-settings-name:$breakpoint-name);
+
+						@content;
+					}
+			}
+	}

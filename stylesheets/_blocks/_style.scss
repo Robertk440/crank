@@ -1,0 +1,39 @@
+//# Style
+// Blocks for groups of styles to be demonstrated within
+.style
+	{
+		@extend %block;
+
+		border:1px solid map-get($colors,regular-grey);padding:30px;
+
+		//% Nodes
+		&-header
+			{
+				//% Nodes
+				&__title
+					{
+						@extend %display-block;
+						@extend %font-heading;
+						@extend %text-align-center;
+						@include adjust-font-size-to(42px);
+						@include adjust-leading-to(3);
+					}
+				//%
+			}
+
+		&-main
+			{
+				padding:20px 0;
+
+				//% Nodes
+				&__title
+					{
+						@extend %display-block;
+						@extend %font-heading;
+						@include adjust-font-size-to(22px);
+						@include adjust-leading-to(1);
+					}
+				//%
+			}
+		//%
+	}

@@ -1,0 +1,91 @@
+//# Margins
+// These are handy to modify one of modules that just need a small change
+// that doesn't warrant a modified module. The classes generated are based on
+// config/utilities
+.util
+	{
+		&.margin
+			{
+				//% Nodes
+				&-auto{margin:auto;}
+				//%
+
+				@each $i in $margins
+					{
+						//% Nodes
+						&-#{$i}
+							{
+								margin:add-unit-type($i);
+							}
+						//%
+					}
+
+				&-bottom
+					{
+						//% Nodes
+						&-auto{margin:{bottom:auto;};}
+						//%
+
+						@each $i in $margins
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										margin:{bottom:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+
+				&-left
+					{
+						//% Nodes
+						&-auto{margin:{left:auto;};}
+						//%
+
+						@each $i in $margins
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										margin:{left:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+
+				&-right
+					{
+						//% Nodes
+						&-auto{margin:{right:auto;};}
+						//%
+
+						@each $i in $margins
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										margin:{right:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+
+				&-top
+					{
+						//% Nodes
+						&-auto{margin:{top:auto;};}
+						//%
+
+						@each $i in $margins
+							{
+								//% Nodes
+								&-#{$i}
+									{
+										margin:{top:add-unit-type($i);};
+									}
+								//%
+							}
+					}
+			}
+	}

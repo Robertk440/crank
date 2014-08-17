@@ -1,0 +1,24 @@
+//# Colors
+// Try to use a standard color pattern so it's easy to identify your colors.
+// Colors are used by utilities to create foreground and background classes
+// which can be seen in utilities/colors
+
+//# Colors
+// This is where colors are added. Accessible by map-get syntax (map-get($colors,color-name))
+$colors:(
+	clarity:#fff,
+	dark-grey:#1a1b1f,
+	medium-grey:#545454,
+	regular-grey:#d5d5d5,
+	light-grey:#f9fafd,
+	light-light-grey:#f0f0f0,
+	pitch:#000,
+	regular-blue:#008cba,
+	regular-teal:#074e68
+);
+
+//# Contrasts
+// For general use, if there are particular highlighting colors commonly used
+$dark:map-get($colors,pitch);
+$light:map-get($colors,clarity);
+//%

@@ -1,0 +1,20 @@
+{
+	"items":
+		[
+			{
+				"body":"Body text",
+				"media":"http://lorempixel.com/400/400/people/",
+				"title":"test"
+			},
+			{
+				"body":"Body text 2",
+				"media":"http://lorempixel.com/400/400/city/",
+				"title":"test2"
+			},
+			{
+				"body":"Body text 3",
+				"media":"http://lorempixel.com/400/400/animals/",
+				"title":"test3"
+			}
+		]
+}

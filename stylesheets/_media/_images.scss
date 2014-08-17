@@ -1,0 +1,7 @@
+//# Images
+img
+	{
+		@extend %display-block;
+
+		image-rendering:-webkit-optimize-contrast;
+	}

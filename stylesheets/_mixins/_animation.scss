@@ -1,0 +1,7 @@
+//# Animation
+@mixin animation($properties)
+	{
+		-moz-animation:unquote($properties);
+		-webkit-animation:unquote($properties);
+		animation:unquote($properties);
+	}

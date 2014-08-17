@@ -1,0 +1,6 @@
+//# Remove Quotes
+// Often handy when passing values between functions
+@function remove-quotes($argument)
+	{
+		@return(unquote($argument));
+	}

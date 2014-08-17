@@ -1,0 +1,12 @@
+//# Ng Enter
+.ng-scope
+	{
+		@include transition(opacity 0.5s ease-in-out);
+	}
+
+.ng-enter
+	{
+		@include transition(opacity 0.5s ease-in-out);
+
+		opacity:0;
+	}

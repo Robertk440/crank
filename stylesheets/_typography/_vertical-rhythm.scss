@@ -1,0 +1,8 @@
+//# Vertical Rhythm
+
+$base-font-size:16px;
+$base-line-height:24px;
+$rhythm-unit:"rem";
+$rem-with-px-fallback:true;
+
+@include establish-baseline;

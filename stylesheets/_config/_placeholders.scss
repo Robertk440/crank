@@ -1,0 +1,443 @@
+//# Placeholders
+// For more efficient use of @include directives, relegating a class to be the single point of inclusion of that code to lower repetition
+@import "compass";
+@import "compass/css3/user-interface";
+
+//% Appearance
+$appearance:none,normal,icon,window,button,menu,field!default;
+
+@each $property in $appearance
+	{
+		%appearance-#{$property}
+			{
+				@include appearance($property);
+			}
+	}
+//%
+
+//% Background clip
+$background-clip:padding-box,border-box,text!default;
+
+@each $property in $background-clip
+	{
+		%background-clip-#{$property}
+			{
+				@include background-clip($property);
+			}
+	}
+//%
+
+//% Background origin
+$background-origin:padding-box,border-box,content-box!default;
+
+@each $property in $background-origin
+	{
+		%background-origin-#{$property}
+			{
+				@include background-origin($property);
+			}
+	}
+//%
+
+//% Backface Visibility
+$backface-visibility:visible,hidden!default;
+
+@each $property in $backface-visibility
+	{
+		%backface-visibility-#{$property}
+			{
+				@include backface-visibility($property);
+			}
+	}
+//%
+
+//% Block
+//% The block core class
+%block
+	{
+		@extend %legacy-pie-clearfix;
+	}
+//%
+
+//% Box Sizing
+$box-sizing:content-box,border-box!default;
+
+@each $property in $box-sizing
+	{
+		%box-sizing-#{$property}
+			{
+				@include box-sizing($property);
+			}
+	}
+//%
+
+//% Clearfixing
+%clearfix
+	{
+		@include clearfix;
+	}
+
+%legacy-pie-clearfix
+	{
+		@include legacy-pie-clearfix;
+	}
+//%
+
+//% Colours
+%background
+	{
+		&-color
+			{
+				@each $color-name,$color-value in $colors
+					{
+						&-#{$color-name}
+							{
+								@include contrasted($color-value,$dark,$light);
+							}
+					}
+			}
+	}
+
+%foreground
+	{
+		&-color
+			{
+				@each $color-name,$color-value in $colors
+					{
+						&-#{$color-name}
+							{
+								color:$color-value;
+							}
+					}
+			}
+	}
+//%
+
+//% Content
+%content-none
+	{
+		content:"";
+	}
+//%
+
+//% Cursor
+$cursor:none,pointer;
+
+@each $property in $cursor
+	{
+		%cursor-#{$property}
+			{
+				cursor:$property;
+			}
+	}
+//%
+
+//% Display
+$display:none,inline-block,inline,table,table-cell,table-header-group,block;
+
+@each $property in $display
+	{
+		%display-#{$property}
+			{
+				display:$property;
+			}
+	}
+//%
+
+//% Element
+//% The element core class
+%element
+	{
+		@extend %legacy-pie-clearfix;
+	}
+//%
+
+//% Floats
+$float-type:left,right,none;
+
+@each $property in $float-type
+	{
+		%float-#{$property}
+			{
+				float:$property;
+			}
+	}
+
+%reset-float
+	{
+		@include reset-float;
+	}
+//%
+
+//% Font types
+@each $font-type,$font-name in $fonts
+	{
+		%font-#{$font-type}
+			{
+				font:{family:$font-name;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+				text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+				-webkit-text-size-adjust:100%;
+
+				&-thin
+					{
+						font:{family:$font-name;weight:100;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+						-webkit-text-size-adjust:100%;
+					}
+				&-light
+					{
+						font:{family:$font-name;weight:300;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+						-webkit-text-size-adjust:100%;
+					}
+				&-normal
+					{
+						font:{family:$font-name;weight:400;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+						-webkit-text-size-adjust:100%;
+					}
+				&-medium
+					{
+						font:{family:$font-name;weight:500;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+						-webkit-text-size-adjust:100%;
+					}
+				&-bold
+					{
+						font:{family:$font-name;weight:600;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+						-webkit-text-size-adjust:100%;
+					}
+			}
+	}
+//%
+
+//% Lists
+$list-style:none,disc,square,inside,outside;
+
+@each $property in $list-style
+	{
+		%list-style-#{$property}
+			{
+				list-style:$property;
+			}
+	}
+
+$list-style-image:none;
+
+@each $property in $list-style-image
+	{
+		%list-style-image-#{$property}
+			{
+				list-style-image:$property;
+			}
+	}
+
+$list-style-position:inside,outside;
+
+@each $property in $list-style-position
+	{
+		%list-style-position-#{$property}
+			{
+				list-style-position:$property;
+			}
+	}
+
+$list-style-type:disc,circle,square,
+decimal,decimal-leading-zero,
+lower-roman,upper-roman,lower-greek,lower-latin,upper-latin,
+armenian,georgian,lower-alpha,upper-alpha,none;
+
+@each $property in $list-style-type
+	{
+		%list-style-type-#{$property}
+			{
+				list-style-type:$property;
+			}
+	}
+
+%no-bullet
+	{
+		@include no-bullet;
+	}
+
+%no-bullets
+	{
+		@include no-bullets;
+	}
+
+%inline-list
+	{
+		@include inline-list;
+	}
+//%
+
+//% Icon
+%icon
+	{
+		@extend %clearfix;
+		@extend %display-block;
+
+		&:focus,&:hover
+			{
+				@extend %text-decoration-none;
+			}
+	}
+//%
+
+//% Media
+%media
+	{
+		@extend %clearfix;
+
+		embed,img,object,video
+			{
+				@extend %display-block;
+			}
+	}
+//%
+
+//% Opacity
+$opacity:0,0.5,1!default;
+
+@each $property in $opacity
+	{
+		%opacity-#{$property * 100}
+			{
+				@include opacity($property);
+			}
+	}
+//%
+
+//% Overflow
+$overflow:hidden,scroll,auto!default;
+
+@each $property in $overflow
+	{
+		%overflow-#{$property}
+			{
+				overflow:$property;
+			}
+	}
+//%
+
+//% Font weight
+$font-weight:normal,bold,lighter;
+
+@each $property in $font-weight
+	{
+		%font-weight-#{$property}
+			{
+				font:{weight:$property;};
+			}
+	}
+//%
+
+//% Font style
+$font-style:normal,italic;
+
+@each $property in $font-style
+	{
+		%font-style-#{$property}
+			{
+				font-style:$property;
+			}
+	}
+//%
+
+//% Position
+$position:absolute,fixed,relative,static;
+
+@each $property in $position
+	{
+		%position-#{$property}
+			{
+				position:$property;
+			}
+	}
+//%
+
+//% Spread
+%structure
+	{
+		@extend %clearfix;
+	}
+//%
+
+//% Reset
+%reset-spacing{margin:0;padding:0;}
+//%
+
+//% Text decoration
+$text-decoration:none,underline;
+
+@each $property in $text-decoration
+	{
+		%text-decoration-#{$property}
+			{
+				text-decoration:$property;
+			}
+	}
+//%
+
+//% Text alignment
+$text-align:left,center,right,justify;
+
+@each $property in $text-align
+	{
+		%text-align-#{$property},.text-align-#{$property}
+			{
+				text-align:$property;
+			}
+	}
+//%
+
+//% Text hide
+%text-hide
+	{
+		@include hide-text;
+	}
+//%
+
+//% Text shadow
+%text-shadow-none
+	{
+		@include text-shadow(none);
+	}
+//%
+
+//% Text transform
+$text-transform:none,capitalize,uppercase,lowercase,full-width;
+
+@each $property in $text-transform
+	{
+		%text-transform-#{$property}
+			{
+				text-transform:$property;
+			}
+	}
+//%
+
+//% User select
+$user-select:none,text,toggle,element,elements,all,inherit!default;
+
+@each $property in $user-select
+	{
+		%user-select-#{$property}
+			{
+				@include user-select($property);
+			}
+	}
+//%
+
+//% Vertical align
+$vertical-align:bottom,middle,top;
+
+@each $property in $vertical-align
+	{
+		%vertical-align-#{$property}
+			{
+				vertical-align:$property;
+			}
+	}
+//%

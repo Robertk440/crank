@@ -1,0 +1,183 @@
+//# Text
+p
+	{
+		@extend %font-common;
+	}
+
+//% Anchors
+a
+	{
+		@extend %element;
+		@extend %text-decoration-none;
+
+		color:inherit;
+
+		&:focus,&:hover
+			{
+				@extend %text-decoration-none;
+			}
+	}
+//%
+
+//% Emphasise
+b
+	{
+		@extend %font-weight-bold;
+
+		color:inherit;font:{family:inherit;size:inherit;};
+	}
+
+em
+	{
+		color:inherit;font:{family:inherit;size:inherit;};
+	}
+
+i
+	{
+		color:inherit;font:{family:inherit;size:inherit;};
+	}
+
+strong
+	{
+		@extend %font-weight-bold;
+
+		color:inherit;font:{family:inherit;size:inherit;};
+	}
+//%
+
+//% Headings
+h1,h2,h3,h4,h5,h6
+	{
+		@extend %font-heading;
+		@extend %reset-spacing;
+	}
+
+.terra
+	{
+		@include adjust-font-size-to(42px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.giga
+	{
+		@include adjust-font-size-to(36px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.mega
+	{
+		@include adjust-font-size-to(30px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.alpha
+	{
+		@include adjust-font-size-to(26px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.beta
+	{
+		@include adjust-font-size-to(24px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.delta
+	{
+		@include adjust-font-size-to(22px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.gamma
+	{
+		@include adjust-font-size-to(18px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.epsilon
+	{
+		@include adjust-font-size-to(16px);
+		@include adjust-leading-to(1);
+		@extend %reset-spacing;
+	}
+
+.zeta
+	{
+		@include adjust-font-size-to(16px);
+		@include adjust-leading-to(1);
+		@extend %text-transform-uppercase;
+		@extend %reset-spacing;
+	}
+
+h1
+	{
+		@extend .terra;
+	}
+
+h2
+	{
+		@extend .giga;
+	}
+
+h3
+	{
+		@extend .mega;
+	}
+
+h4
+	{
+		@extend .alpha;
+	}
+
+h5
+	{
+		@extend .beta;
+	}
+
+h6
+	{
+		@extend .delta;
+	}
+//%
+
+//% Rich text
+.rich-text
+	{
+		//% Anchors
+
+		//%
+
+		//% Lists
+		ul,ol,dl
+			{
+				li,dt,dd
+					{
+						@include adjust-leading-to(1);
+						@extend %font-common;
+					}
+			}
+		//%
+
+		//% Paragraphs
+		p
+			{
+				@include adjust-leading-to(1);
+
+				margin:{bottom:0;top:20px;};
+
+				&:first-child{margin:{top:0;};}
+			}
+		//%
+
+		//% Headings
+
+		//%
+	}
+//%

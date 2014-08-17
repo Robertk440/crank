@@ -1,0 +1,58 @@
+//# Column
+// The basic column classing and building. There are large, medium, small versions so you can adjust
+// for different viewports
+.column
+	{
+		@extend %block;
+		@extend %float-left;
+
+		//% Views
+		@include breakpoint("large")
+			{
+				//% Nodes
+				&-large
+					{
+						@each $i in $columns
+							{
+								&-#{$i}
+									{
+										@include columns(1,0,$i);
+									}
+							}
+					}
+				//%
+			}
+
+		@include breakpoint("medium")
+			{
+				//% Nodes
+				&-medium
+					{
+						@each $i in $columns
+							{
+								&-#{$i}
+									{
+										@include columns(1,0,$i);
+									}
+							}
+					}
+				//%
+			}
+
+		@include breakpoint("small")
+			{
+				//% Nodes
+				&-small
+					{
+						@each $i in $columns
+							{
+								&-#{$i}
+									{
+										@include columns(1,0,$i);
+									}
+							}
+					}
+				//%
+			}
+		//%
+	}

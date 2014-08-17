@@ -1,0 +1,8 @@
+//# Hints
+abbr{cursor:help;}
+
+small
+	{
+		@include adjust-font-size-to(10px);
+		@include adjust-leading-to(1);
+	}
