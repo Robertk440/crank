@@ -4,7 +4,7 @@
 	{
 		@extend %block;
 
-		margin:{left:auto;right:auto;};max-width:map-get($product,max-width);
+		margin:{left:auto;right:auto;};max-width:map-get($product,max-width);padding:{top:50vh};
 
 		//% Nodes
 		&-header
