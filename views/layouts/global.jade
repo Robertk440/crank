@@ -17,26 +17,26 @@ html(class="no-js",lang="en")
 	meta(content="#",name="description")
 	meta(content="#",name="author")
 
-	//-Mobile Viewport Scaling
+	//# Mobile Viewport Scaling
 	meta(content="True",name="HandheldFriendly")
 	meta(content="320",name="MobileOptimized")
 	meta(content="width=device-width,initial-scale=1",name="viewport")
 	meta(content="no",name="user-scalable")
 	meta(content="on",http-equiv="cleartype")
 
-	//-Apple Convention Specifics
+	//# Apple Convention Specifics
 	meta(content="yes",name="apple-mobile-web-app-capable")
 	meta(content="black",name="apple-mobile-web-app-status-bar-style")
 	meta(content=product.title,name="apple-mobile-web-app-title")
 
-	//-Microsoft Convention Specifics
+	//# Microsoft Convention Specifics
 	meta(content=product.title,name="application-name")
 	meta(content="/browser/msapplication.xml",name="msapplication-config")
 
-	//-Icons
+	//# Icons
 	link(href="touch.png",rel="shortcut icon")
 
-	//-LoadCSS
+	//# LoadCSS
 	script(type="text/javascript").
 		/*!
 			loadCSS: load a CSS file asynchronously.
@@ -76,12 +76,12 @@ html(class="no-js",lang="en")
 
 		loadCSS("/stylesheets/style.css");
 
-	//-Require JS
+	//# Require JS
 	script(data-main="/scripts/load.js",src="/dependencies/requirejs/require.js")
 
-	//-Live Reload
-	script.
-		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+	//# Live Reload
+	// script.
+	// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 	body
 
@@ -91,6 +91,9 @@ html(class="no-js",lang="en")
 
 				h1.product-header__title
 					| #{product.title}
+
+				h2.product-header__title--sub
+					| #{product.subtitle}
 
 			//-@.header
 

@@ -14,24 +14,24 @@
 				//% Nodes
 				&__title
 					{
-						@extend %font-heading-light;
+						@extend %font-heading-thin;
 						@extend %display-block;
 						@extend %text-align-center;
 						@extend %user-select-none;
-						@include adjust-font-size-to(50px);
-						@include adjust-leading-to(2);
+						@include adjust-font-size-to(72px);
+						@include adjust-leading-to(3);
 
 						//% Mods
-						&-sub
+						&--sub
 							{
 								@extend %display-block;
 								@extend %text-align-center;
 								@extend %position-relative;
 								@extend %user-select-none;
-								@include adjust-font-size-to(16px);
+								@include adjust-font-size-to(36px);
 								@include adjust-leading-to(1);
 
-								margin:{top:5px;};padding:10px;
+								margin:{top:5px;};
 							}
 						//%
 					}
