@@ -13,10 +13,12 @@ require.config(
 				'angular_sanitize':'/dependencies/angular-sanitize/angular-sanitize.min',
 				'app':'application',
 				'carousel':'plugins/carousel',
+				'controllers':'application/controllers',
+				'directives':'application/directives',
 				'jquery':'/dependencies/jquery/dist/jquery',
 				'modernizr':'/dependencies/modernizr/modernizr',
 				'scripts':'scripts',
-				'skycons':'/dependencies/skycons/skycons'
+				'services':'application/services'
 			},
 		shim:
 			{
@@ -56,6 +58,16 @@ require.config(
 						deps:['jquery']
 					},
 
+				'controllers':
+					{
+						deps:['angular','app']
+					},
+
+				'directives':
+					{
+						deps:['angular','app']
+					},
+
 				'jquery':
 					{
 						deps:[''],
@@ -69,12 +81,12 @@ require.config(
 
 				'scripts':
 					{
-						deps:['skycons','jquery']
+						deps:['jquery']
 					},
 
-				'skycons':
+				'services':
 					{
-						deps:['jquery']
+						deps:['angular','app']
 					}
 			}
 	}
@@ -90,17 +102,17 @@ define(function(require)
 			angular_sanitize=require('angular_sanitize'),
 			app=require('app'),
 			carousel=require('carousel'),
+			controllers=require('controllers'),
+			directives=require('directives'),
 			jquery=require('jquery'),
 			modernizr=require('modernizr'),
 			scripts=require('scripts'),
-			skycons=require('skycons');
+			services=require('services');
 
 		//% Initialise
 		$(document).ready(function()
 			{
-				// Accordion.init();
-				App.init();
-				// Carousel.init();
+
 			}
 		);
 		//%

@@ -87,7 +87,12 @@ html(class="no-js",lang="en")
 
 		.product
 
-			nav.product-navigation(product-navigation)
+			header.product-header
+
+				h1.product-header__title
+					| #{product.title}
+
+			//-@.header
 
 			main.product-main.rich-text
 
