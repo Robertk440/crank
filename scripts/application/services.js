@@ -3,11 +3,11 @@
 	{
 		var store=
 			{
-				applicationServices:''
+				services:''
 			}
 
 		//% Services Instantiation
-		store.applicationServices=angular.module('application.services',[]);
+		store.services=angular.module('application.services',[]);
 		//%
 	}
 )();

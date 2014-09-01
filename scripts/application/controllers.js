@@ -3,27 +3,30 @@
 	{
 		var store=
 			{
-				applicationControllers:'',
-				reference:'',
-				request:'',
-				sync:''
+				controllers:'',
+				database:
+					{
+						url:'',
+						request:'',
+						sync:''
+					}
 			}
 
 		//% Controllers instantiation
-		store.applicationControllers=angular.module('application.controllers',[]);
+		store.controllers=angular.module('application.controllers',[]);
 		//%
 
 		//% Application Controller
 		// Global controller for the application
-		store.applicationControllers.controller('ApplicationController',['$firebase','$http','$location','md5','$route','$scope',function($firebase,$http,$location,md5,$route,$scope)
+		store.controllers.controller('ApplicationController',['$firebase','$http','$location','md5','$route','$scope',function($firebase,$http,$location,md5,$route,$scope)
 			{
-				store.reference=new Firebase("https://amber-fire-7539.firebaseio.com/");
-				store.sync=$firebase(store.reference);
-				store.request=store.sync.$asObject();
+				store.database.url=new Firebase("https://amber-fire-7539.firebaseio.com/");
+				store.database.sync=$firebase(store.database.url);
+				store.database.request=store.database.sync.$asObject();
 
-				store.request.$loaded().then(function()
+				store.database.request.$loaded().then(function()
 					{
-						$scope.application_data=store.request;
+						$scope.application_data=store.database.request;
 					}
 				);
 			}

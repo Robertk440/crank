@@ -3,9 +3,9 @@
 	{
 		var store=
 			{
-				applicationDirectives:''
+				directives:''
 			}
 
-		store.applicationDirectives=angular.module('application.directives',[]);
+		store.directives=angular.module('application.directives',[]);
 	}
 )();

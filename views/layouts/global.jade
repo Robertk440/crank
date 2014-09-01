@@ -53,7 +53,7 @@ html(class="no-js",lang="en",ng-controller="ApplicationController")
 
 				a(ng-href="{{application_data.application.twitter_url}}")
 
-					img.util.border-circle.block-center(ng-src="http://www.gravatar.com/avatar/{{application_data.application.email|gravatar}}?s=150")
+					img.application-header__object(ng-src="http://www.gravatar.com/avatar/{{application_data.application.email|gravatar}}?s=150")
 
 				h1.application-header__title
 					| {{application_data.application.title}}

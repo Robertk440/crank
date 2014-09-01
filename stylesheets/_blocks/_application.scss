@@ -4,7 +4,7 @@
 	{
 		@extend %block;
 
-		margin:{left:auto;right:auto;};max-width:map-get($product,max-width);padding:{top:50vh};
+		margin:{left:auto;right:auto;};margin:{top:25vh};max-width:map-get($product,max-width);
 
 		//% Nodes
 		&-header
@@ -12,12 +12,21 @@
 				margin:{bottom:20px;};
 
 				//% Nodes
+				&__object
+					{
+						@extend .util.border-circle;
+						@extend .util.block-center;
+						@extend .util.margin-bottom-10;
+
+						border:5px solid map-get($colors,clarity);
+					}
 				&__title
 					{
 						@extend %font-heading-thin;
 						@extend %display-block;
 						@extend %text-align-center;
 						@extend %user-select-none;
+						@extend .util.margin-bottom-10;
 						@include adjust-font-size-to(72px);
 						@include adjust-leading-to(3);
 
