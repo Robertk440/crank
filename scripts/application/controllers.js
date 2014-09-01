@@ -6,7 +6,9 @@
 				applicationControllers:''
 			}
 
+		//% Controllers instantiation
 		store.applicationControllers=angular.module('application.controllers',[]);
+		//%
 
 		//% Application Controller
 		// Global controller for the application
