@@ -31,14 +31,6 @@ module.exports=(grunt)->
 					port:1337
 		#
 
-		# Dev Update
-		devUpdate:
-			all:
-				options:
-					reportUpdated:'false'
-					updateType:'force'
-		#
-
 		# Image Minification
 		imagemin:
 			all:
@@ -48,18 +40,6 @@ module.exports=(grunt)->
 					expand:true
 					src:['**/*.{png,jpg,jpeg}']
 				]
-		#
-
-		# Import
-		import:
-			scripts:
-				files:
-					[
-						cwd:'scripts/',
-						dest:'build/scripts/',
-						expand:true
-						src:['**/*.js']
-					]
 		#
 
 		# Jade
@@ -77,6 +57,15 @@ module.exports=(grunt)->
 					basedir:'views'
 					pretty:true
 		#
+
+		# Modernizr
+		modernizr:
+			build:
+				devFile:'dependencies/modernizr/modernizr.js'
+				extra:
+					'load':true
+				outputFile:'dependencies/modernizr/modernizr-build.js'
+				uglify:true
 
 		# Notify
 		notify_hooks:
@@ -104,136 +93,42 @@ module.exports=(grunt)->
 		#
 
 		# Sync
-		sync:
-			application:
-				files:[
-					{
-						cwd:'scripts/application'
-						dest:'build/scripts/application'
-						expand:true
-						src:'**'
-					}
-				]
-
-			browser:
-				files:[
-					{
-						cwd:'config'
-						dest:'build/config'
-						expand:true
-						src:'**'
-					}
-				]
-
-			data:
-				files:[
-					cwd:'data'
-					dest:'build/data'
-					expand:true
-					src:'**/**/**/**/*.json'
-				]
-
-			deps:
-				files:[
-					cwd:'dependencies'
-					dest:'build/dependencies'
-					expand:true
-					src:'**'
-				]
-
-			extras:
-				files:[
-					{
-						dest:'build/'
-						expand:true
-						src:['*.{png,ico,txt,xml}']
-					}
-				]
-
-			fonts:
-				files:[
-					{
-						cwd:'fonts'
-						dest:'build/fonts'
-						expand:true
-						src:'**'
-					}
-				]
-
-			images:
-				files:[
-					{
-						cwd:'images'
-						dest:'build/images'
-						expand:true
-						src:['**/*.{png,jpg,jpeg,gif}']
-					}
-				]
-
-			require:
-				files:[
-					{
-						cwd:'scripts'
-						dest:'build/scripts'
-						expand:true
-						src:['require.js']
-					}
-				]
-
-			scripts:
-				files:[
-					{
-						cwd:'scripts'
-						dest:'build/scripts'
-						expand:true
-						src:['plugins/*.js','polyfills/*.js','load.js','scripts.js','application.js']
-					}
-				]
-		#
-
-		# Uglify
-		uglify:
-			scripts:
-				files:
-					{
-						'build/scripts/load-min.js':['build/scripts/load.js']
-					}
+		rsync:
+			dist:
+				options:
+					dest:'build'
+					src:'./'
+			options:
+				delete:true
+				exclude:['build','node_modules','bowerrc','*.html','compass','views','package.json','stylesheets','Gruntfile.coffee','.gitignore','.editorconfig','.DS_Store','bower.json','readme.md','.git','.sass-cache']
+				recursive:true
 		#
 
 		# Watch
 		watch:
 			application:
-				files:['scripts/application/*.js']
-				tasks:['sync:application']
+				files:['browser/*.xml','scripts/application/*.js','data/**/**/**/**/**/*.json','fonts/**']
+				tasks:['rsync']
 
-			browser:
-				files:['browser/*.xml']
-				tasks:['sync:browser']
 
 			build:
 				files:['build/stylesheets/**/*.css','build/**/*.html','build/images/**/*','build/scripts/**/*.js']
 				options:
 					livereload:true
 
-			data:
-				files:['data/**/**/**/**/**/*.json']
-				tasks:['sync:data']
-
-			fonts:
-				files:['fonts/**']
-				tasks:['sync:fonts','notify:watch']
-
 			img:
 				files:['images/**/*.{jpg,png,jpeg}']
-				tasks:['sync:images','imagemin','notify:watch']
+				tasks:['rsync','imagemin','notify:watch']
 
 			jade:
 				files:['components/*.jade','views/**/*.jade']
+				options:
+					livereload:true
 				tasks:['jade','notify:watch']
 
 			scripts:
 				files:['scripts/**/*.js']
-				tasks:['sync:scripts','notify:watch']
+				tasks:['rsync','notify:watch']
 
 			stylesheets:
 				files:['build/stylesheets/style.css']
@@ -243,9 +138,8 @@ module.exports=(grunt)->
 	#
 
 	# Register Tasks
-	grunt.registerTask 'clean',['compass:build','sync','import','jade','remove']
-	grunt.registerTask 'default',['compass:build','sync','jade']
-	grunt.registerTask 'deploy',['compass:build','sync','jade','uglify']
+	grunt.registerTask 'clean',['compass:build','rsync','import','jade','remove']
+	grunt.registerTask 'default',['compass:build','rsync','jade']
+	grunt.registerTask 'deploy',['compass:build','rsync','jade','uglify']
 	grunt.registerTask 'server',['connect','parallel','notify']
-	grunt.registerTask 'update',['devUpdate']
 	#

@@ -1,17 +1,13 @@
 {
   "name": "Crank",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
-    "requirejs": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-sanitize": "latest",
+    "angular-animate": "latest",
     "jquery": "latest",
     "modernizr": "latest",
-    "angular": "latest",
     "normalize-css": "latest"
-  },
-  "devDependencies": {
-    "angular-route": "~1.2.22",
-    "angular-sanitize": "~1.2.22",
-    "angular-animate": "~1.2.22",
-    "skycons": "*"
   }
 }
