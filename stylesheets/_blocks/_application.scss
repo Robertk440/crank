@@ -18,7 +18,7 @@
 						@extend .util.block-center;
 						@extend .util.margin-bottom-10;
 
-						border:5px solid map-get($colors,clarity);
+						border:10px solid map-get($colors,clarity);
 					}
 				&__title
 					{
