@@ -10,13 +10,15 @@
 
 		//% Application Controller
 		// Global controller for the application
-		store.applicationControllers.controller('ApplicationController',['$http','$scope',function($http,$scope)
+		store.applicationControllers.controller('ApplicationController',['$http','md5','$scope',function($http,md5,$scope)
 			{
 				$http.get('data/application.json').success(function(data)
 					{
 						$scope.applicationData=data;
 					}
 				);
+
+				$scope.email=md5.createHash("matthew@sandersons.id.au");
 			}
 		]);
 	}

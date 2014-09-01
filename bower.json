@@ -8,6 +8,7 @@
     "angular-animate": "latest",
     "jquery": "latest",
     "modernizr": "latest",
-    "normalize-css": "latest"
+    "normalize-css": "latest",
+    "angular-md5": "~0.1.7"
   }
 }

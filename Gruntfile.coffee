@@ -138,8 +138,8 @@ module.exports=(grunt)->
 	#
 
 	# Register Tasks
-	grunt.registerTask 'clean',['compass:build','rsync','import','jade','remove']
-	grunt.registerTask 'default',['compass:build','rsync','jade']
+	grunt.registerTask 'clean',['compass:build','modernizr','rsync','import','jade','remove']
+	grunt.registerTask 'default',['compass:build','modernizr','rsync','jade']
 	grunt.registerTask 'deploy',['compass:build','rsync','jade','uglify']
 	grunt.registerTask 'server',['connect','parallel','notify']
 	#

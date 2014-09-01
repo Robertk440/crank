@@ -9,6 +9,7 @@ Modernizr.load(
 		'/dependencies/angular-animate/angular-animate.min.js',
 		'/dependencies/angular-route/angular-route.min.js',
 		'/dependencies/angular-sanitize/angular-sanitize.min.js',
+		'/dependencies/angular-md5/angular-md5.min.js',
 		'/scripts/application/controllers.js',
 		'/scripts/application/directives.js',
 		'/scripts/application/services.js',
