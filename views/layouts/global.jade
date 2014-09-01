@@ -51,13 +51,15 @@ html(class="no-js",lang="en",ng-controller="ApplicationController")
 
 			header.application-header(ng-animate="{enter:'fade-in',leave:'fade-out'}")
 
-				img.util.border-circle.block-center(ng-src="http://www.gravatar.com/avatar/{{email}}?s=200")
+				a(href="http://www.twitter.com/mksanderson/")
+
+					img.util.border-circle.block-center(ng-src="http://www.gravatar.com/avatar/{{email}}?s=200")
 
 				h1.application-header__title
-					| {{applicationData.title}}
+					| {{application_data.title}}
 
 				h2.application-header__title--sub
-					| {{applicationData.description}}
+					| {{application_data.description}}
 
 			//-@.header
 

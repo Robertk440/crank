@@ -16,7 +16,7 @@
 			{
 				$http.get('data/application.json').success(function(data)
 					{
-						$scope.applicationData=data;
+						$scope.application_data=data;
 					}
 				);
 
