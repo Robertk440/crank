@@ -22,6 +22,7 @@
 					}
 				&__title
 					{
+						@extend .util.background-color-pitch;
 						@extend %font-heading-thin;
 						@extend %display-block;
 						@extend %text-align-center;
@@ -30,9 +31,12 @@
 						@include adjust-font-size-to(72px);
 						@include adjust-leading-to(3);
 
+						border:0;width:100%;
+
 						//% Mods
 						&--sub
 							{
+								@extend .util.background-color-pitch;
 								@extend %display-block;
 								@extend %text-align-center;
 								@extend %position-relative;
@@ -40,7 +44,7 @@
 								@include adjust-font-size-to(36px);
 								@include adjust-leading-to(1);
 
-								margin:{top:5px;};
+								border:0;margin:{top:5px;};width:100%;
 							}
 						//%
 					}

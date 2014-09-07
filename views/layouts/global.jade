@@ -51,25 +51,13 @@ html(class="no-js",lang="en",ng-controller="ApplicationController")
 
 			header.application-header
 
-				a(ng-href="{{application_data.application.twitter_url}}")
-
-					img.application-header__object(ng-src="http://www.gravatar.com/avatar/{{application_data.application.email|gravatar}}?s=150")
-
-				h1.application-header__title
-					| {{application_data.application.title}}
-
-				h2.application-header__title--sub
-					| {{application_data.application.description}}
+				block header
 
 			//-@.header
 
 			main.application-main.rich-text
 
-				.application-content(ng-view)
-
-
-
-				//-@.content
+				block content
 
 			//-@.main
 

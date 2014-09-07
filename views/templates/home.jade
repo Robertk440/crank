@@ -1,0 +1,7 @@
+a(ng-href="{{database_data.application.twitter_url}}")
+
+	img.application-header__object(ng-src="http://www.gravatar.com/avatar/{{database_data.application.email|gravatar}}?s=150")
+
+input.application-header__title(ng-model="database_data.application.title",placeholder="",type="text",value="{{database_data.application.title}}")
+
+input.application-header__title--sub(ng-model="database_data.application.description",placeholder="",type="text",value="{{database_data.application.description}}")

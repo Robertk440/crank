@@ -14,12 +14,9 @@
 		store.application.config(['$routeProvider',function($routeProvider)
 			{
 				$routeProvider.
-					otherwise(
+					when('/',
 						{
-							redirectTo:function(routeParams,path,search)
-								{
-									return "/";
-								}
+							templateUrl:'/templates/home.html'
 						}
 					);
 			}
