@@ -133,7 +133,7 @@ $cursor:none,pointer;
 //%
 
 //% Display
-$display:none,inline-block,inline,table,table-cell,table-header-group,block;
+$display:none,flex,inline-block,inline,table,table-cell,table-header-group,block;
 
 @each $property in $display
 	{
@@ -149,6 +149,18 @@ $display:none,inline-block,inline,table,table-cell,table-header-group,block;
 %element
 	{
 		@extend %legacy-pie-clearfix;
+	}
+//%
+
+//% Flex-grow
+$flex-grow:0,1;
+
+@each $property in $flex-grow
+	{
+		%flex-grow-#{$property}
+			{
+				@include flex-grow($property);
+			}
 	}
 //%
 

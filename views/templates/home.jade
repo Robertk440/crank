@@ -1,7 +1,84 @@
 a(ng-href="{{database_data.application.twitter_url}}")
 
-	img.application-header__object(ng-src="http://www.gravatar.com/avatar/{{database_data.application.email|gravatar}}?s=150")
+	img.application-header__object(ng-src="http://www.gravatar.com/avatar/{{storage_data.user_email|gravatar}}?s=150")
 
-input.application-header__title(ng-model="database_data.application.title",placeholder="",type="text",value="{{database_data.application.title}}")
+input.application-header__title(ng-model="storage_data.user_project_name",placeholder="",type="text",value="{{storage_data.user_project_name}}")
 
-input.application-header__title--sub(ng-model="database_data.application.description",placeholder="",type="text",value="{{database_data.application.description}}")
+input.application-header__title--sub(ng-model="storage_data.user_project_type",placeholder="",type="text",value="{{storage_data.user_project_type}}")
+
+form.form
+
+	.form-header
+
+		.form-header__title
+			| User type
+
+	//-@.header
+
+	.form-content
+
+		label.form__row
+
+			.form__enclosure
+
+				span.form-content__title
+					| Your email
+
+			//-@.enclosure
+
+			.form__enclosure
+
+				input.form__input--field(ng-model="storage_data.user_email",placeholder="",type="text")
+
+			//-@.enclosure
+
+		//-@.row
+
+		label.form__row
+
+			.form__enclosure
+
+				span.form-content__title
+					| Your project name
+
+			//-@.enclosure
+
+			.form__enclosure
+
+				input.form__input--field(ng-model="storage_data.user_project_name",placeholder="",type="text")
+
+			//-@.enclosure
+
+		//-@.row
+
+		label.form__row
+
+			.form__enclosure
+
+				span.form-content__title
+					| Crank usage
+
+			//-@.enclosure
+
+			.form__enclosure
+
+				select.form__input--select(ng-model="storage_data.user_project_type",placeholder="")
+
+					option(value="App")
+						| App
+
+					option(value="Experiment")
+						| Experiment
+
+					option(value="Web")
+						| Web
+
+				//-@.input
+
+			//-@.enclosure
+
+		//-@.row
+
+	//-@.content
+
+//-@.form

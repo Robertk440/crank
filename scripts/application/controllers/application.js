@@ -12,7 +12,7 @@
 
 		//% Application Controller
 		// Global controller for the application
-		store.controllers.controller('ApplicationController',['$firebase','$http','$location','md5','$route','$rootScope','$scope',function($firebase,$http,$location,md5,$route,$rootScope,$scope)
+		store.controllers.controller('ApplicationController',['$firebase','$http','$location','$localStorage','md5','$route','$rootScope','$scope',function($firebase,$http,$location,$localStorage,md5,$route,$rootScope,$scope)
 			{
 				//% Set up database
 				//% Connect and set values to rootscope for application wide access
@@ -23,7 +23,7 @@
 
 				$rootScope.database_object.$bindTo($scope,"database_data");
 
-				console.log($rootScope.database_object);
+				$rootScope.storage_data=$localStorage;
 			}
 		]);
 	}

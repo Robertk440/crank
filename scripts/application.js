@@ -7,7 +7,7 @@
 			}
 
 		//% Application instantiation
-		store.application=angular.module('application',['angular-md5','ngAnimate','ngRoute','firebase','application.controllers','application.directives','application.services']);
+		store.application=angular.module('application',['angular-md5','ngAnimate','ngRoute','ngStorage','firebase','application.controllers','application.directives','application.services']);
 		//%
 
 		//% Configuration

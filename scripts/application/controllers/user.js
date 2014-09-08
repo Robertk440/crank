@@ -16,7 +16,7 @@
 		//% User Controller
 		store.controllers.user.controller('UserController',['$firebase','$http','$scope',function($firebase,$http,$scope)
 			{
-				
+
 			}
 		]);
 	}

@@ -12,6 +12,7 @@ Modernizr.load(
 		'/dependencies/angular-route/angular-route.min.js',
 		'/dependencies/angular-sanitize/angular-sanitize.min.js',
 		'/dependencies/angular-md5/angular-md5.min.js',
+		'/dependencies/ngstorage/ngStorage.min.js',
 		'/scripts/application/controllers/user.js',
 		'/scripts/application/controllers/application.js',
 		'/scripts/application/directives.js',
