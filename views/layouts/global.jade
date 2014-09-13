@@ -10,36 +10,40 @@ html(class="no-js",lang="en",ng-controller="ApplicationController")
 
 	meta(content="IE=edge,chrome=1",http-equiv="X-UA-Compatible")
 
-	title=application.title
-
 	meta(charset="utf-8")
+
+	title=application.title
 
 	meta(content="#",name="description")
 	meta(content="#",name="author")
-
+	//#
+	
 	//# Mobile Viewport Scaling
 	meta(content="True",name="HandheldFriendly")
 	meta(content="320",name="MobileOptimized")
 	meta(content="width=device-width,initial-scale=1",name="viewport")
 	meta(content="no",name="user-scalable")
 	meta(content="on",http-equiv="cleartype")
+	//#
 
-	//# Apple Convention Specifics
+	//# Browser specific
+	// Icons and data for modern browsers
+	link(href="touch.png",rel="shortcut icon")
 	meta(content="yes",name="apple-mobile-web-app-capable")
 	meta(content="black",name="apple-mobile-web-app-status-bar-style")
 	meta(content=application.title,name="apple-mobile-web-app-title")
-
-	//# Microsoft Convention Specifics
 	meta(content=application.title,name="application-name")
 	meta(content="/browser/msapplication.xml",name="msapplication-config")
+	//#
 
-	//# Icons
-	link(href="touch.png",rel="shortcut icon")
-
+	//# Stylesheets
+	// Source files built and concatenated into a single file
 	link(href="/stylesheets/style.css",rel="stylesheet")
+	//#
 
 	//# Modernizr
 	script(src="/dependencies/modernizr/modernizr-build.js")
+	//#
 
 	//# Live Reload
 	// script.
@@ -63,4 +67,5 @@ html(class="no-js",lang="en",ng-controller="ApplicationController")
 
 		//-@.application
 
+		//# Script loading
 		script(src="/scripts/load.js")
