@@ -1,11 +1,8 @@
 //# Directives
 (function()
 	{
-		var store=
-			{
-				directives:''
-			}
+		var directives;
 
-		store.directives=angular.module('application.directives',[]);
+		directives=angular.module('directives',[]);
 	}
 )();

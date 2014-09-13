@@ -153,6 +153,18 @@ $display:none,flex,inline-block,inline,table,table-cell,table-header-group,block
 //%
 
 //% Flex-grow
+$justify-content:flex-start,flex-end,center,space-between,space-around;
+
+@each $property in $justify-content
+	{
+		%justify-content-#{$property}
+			{
+				@include justify-content($property);
+			}
+	}
+//%
+
+//% Flex-grow
 $flex-grow:0,1;
 
 @each $property in $flex-grow

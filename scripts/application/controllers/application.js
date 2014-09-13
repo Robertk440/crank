@@ -1,18 +1,15 @@
 //# ApplicationController
 (function()
 	{
-		var store=
-			{
-				controllers:'',
-			}
+		var controllers;
 
 		//% Controllers instantiation
-		store.controllers=angular.module('application.controllers',['application.controllers.user']);
+		controllers=angular.module('controllers',['controllers.user']);
 		//%
 
 		//% Application Controller
 		// Global controller for the application
-		store.controllers.controller('ApplicationController',['$firebase','$http','$location','$localStorage','md5','$route','$rootScope','$scope',function($firebase,$http,$location,$localStorage,md5,$route,$rootScope,$scope)
+		controllers.controller('ApplicationController',['$firebase','$http','$location','$localStorage','md5','$route','$rootScope','$scope',function($firebase,$http,$location,$localStorage,md5,$route,$rootScope,$scope)
 			{
 				//% Set up database
 				//% Connect and set values to rootscope for application wide access

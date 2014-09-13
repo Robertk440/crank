@@ -1,20 +1,14 @@
 //# UserController
 (function()
 	{
-		var store=
-			{
-				controllers:
-					{
-						user:''
-					}
-			}
+		var user;
 
 		//% Controllers instantiation
-		store.controllers.user=angular.module('application.controllers.user',[]);
+		user=angular.module('controllers.user',[]);
 		//%
 
 		//% User Controller
-		store.controllers.user.controller('UserController',['$firebase','$http','$scope',function($firebase,$http,$scope)
+		user.controller('UserController',['$firebase','$http','$scope',function($firebase,$http,$scope)
 			{
 
 			}

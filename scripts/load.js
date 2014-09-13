@@ -4,6 +4,7 @@
 // Default grunt task to generate this. It is created as "moderzir-build.js" in the dependencies/modernizr
 Modernizr.load(
 	[
+		'//cdn.polyfill.io/v1/polyfill.min.js',
 		'/dependencies/jquery/dist/jquery.js',
 		'/dependencies/angular/angular.min.js',
 		'/dependencies/firebase/firebase.js',
