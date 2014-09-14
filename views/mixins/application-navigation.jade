@@ -1,0 +1,8 @@
+//-# Application Navigation
+//- Render the application navigation for the application
+mixin application_navigation(array)
+	-each value,key in array
+		li.application-navigation__enclosure
+			a.application-naviation__item(href=value.href)
+				=value.title
+//-#
