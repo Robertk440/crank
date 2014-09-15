@@ -8,7 +8,7 @@
 		//%
 
 		//% Configuration
-		application.config(['$routeProvider',function($routeProvider)
+		application.config(function($routeProvider)
 			{
 				$routeProvider.
 					when('/',
@@ -17,7 +17,7 @@
 						}
 					);
 			}
-		]);
+		);
 		//%
 
 		//% Bootstrap

@@ -9,19 +9,19 @@
 
 		//% Application Controller
 		// Global controller for the application
-		controllers.controller('ApplicationController',['$firebase','$http','$location','$localStorage','md5','$route','$rootScope','$scope',function($firebase,$http,$location,$localStorage,md5,$route,$rootScope,$scope)
+		controllers.controller('ApplicationController',function($firebase,$firebaseSimpleLogin,$http,$location,$localStorage,md5,$route,$rootScope,$scope)
 			{
+				$scope.database='';
+				$scope.database.sync='';
+				$scope.database.auth='';
+
 				//% Set up database
 				//% Connect and set values to rootscope for application wide access
-				$rootScope.database_url=new Firebase("https://amber-fire-7539.firebaseio.com/");
-				$rootScope.database_sync=$firebase($rootScope.database_url);
-				$rootScope.database_object=$rootScope.database_sync.$asObject();
+				$scope.database=new Firebase('https://amber-fire-7539.firebaseio.com/');
+				$scope.database.sync=$firebase($scope.database);
+				$scope.database.auth=$firebaseSimpleLogin($scope.database);
 				//%
-
-				$rootScope.database_object.$bindTo($scope,"database_data");
-
-				$rootScope.storage_data=$localStorage;
 			}
-		]);
+		);
 	}
 )();

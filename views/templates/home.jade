@@ -6,12 +6,12 @@ input.application-header__title(ng-model="storage_data.user_project_name",placeh
 
 input.application-header__title--sub(ng-model="storage_data.user_project_type",placeholder="",type="text",value="{{storage_data.user_project_type}}")
 
-form.form
+form.form(ng-controller="UserController")
 
 	.form-header
 
 		.form-header__title
-			| User type
+			| Create account
 
 	//-@.header
 
@@ -22,30 +22,13 @@ form.form
 			.form-content__enclosure
 
 				span.form-content__title
-					| Your email
+					| Email
 
 			//-@.enclosure
 
 			.form-content__enclosure
 
-				input.form__input--field(ng-model="storage_data.user_email",placeholder="",type="text")
-
-			//-@.enclosure
-
-		//-@.row
-
-		label.form-content__row
-
-			.form-content__enclosure
-
-				span.form-content__title
-					| Your project name
-
-			//-@.enclosure
-
-			.form-content__enclosure
-
-				input.form__input--field(ng-model="storage_data.user_project_name",placeholder="",type="text")
+				input.form__input--field(ng-model="user.email",placeholder="",type="text")
 
 			//-@.enclosure
 
@@ -56,24 +39,31 @@ form.form
 			.form-content__enclosure
 
 				span.form-content__title
-					| Crank usage
+					| Password
 
 			//-@.enclosure
 
 			.form-content__enclosure
 
-				select.form__input--select(ng-model="storage_data.user_project_type",placeholder="")
+				input.form__input--field(ng-model="user.password",placeholder="",type="text")
 
-					option(value="App")
-						| App
+			//-@.enclosure
 
-					option(value="Experiment")
-						| Experiment
+		//-@.row
 
-					option(value="Web")
-						| Web
+		label.form-content__row
 
-				//-@.input
+			.form-content__enclosure
+
+				button.button(ng-click="createUser(user.email,user.password)")
+					| Create account
+
+			//-@.enclosure
+
+			.form-content__enclosure
+
+				button.button(ng-click="loginUser(user.email,user.password)")
+					| Login
 
 			//-@.enclosure
 

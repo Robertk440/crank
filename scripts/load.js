@@ -9,6 +9,8 @@ Modernizr.load(
 		'/dependencies/jquery/dist/jquery.js',
 		'/dependencies/angular/angular.min.js',
 		'/dependencies/firebase/firebase.js',
+		'/dependencies/angularfire/dist/angularfire.min.js',
+		'/dependencies/firebase-simple-login/firebase-simple-login.js',
 		'/dependencies/angular-animate/angular-animate.min.js',
 		'/dependencies/angularfire/dist/angularfire.min.js',
 		'/dependencies/angular-route/angular-route.min.js',
