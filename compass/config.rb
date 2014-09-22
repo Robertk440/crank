@@ -7,8 +7,8 @@ require "sass-globbing"
 http_path="/"
 css_dir="build/stylesheets"
 sass_dir="stylesheets"
-images_dir="images"
-javascripts_dir="scripts"
+images_dir="build/images"
+javascripts_dir="build/scripts"
 
 output_style=:compressed
 environment=:development
