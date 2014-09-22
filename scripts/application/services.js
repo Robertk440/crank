@@ -1,13 +1,10 @@
 //# Services
 (function()
 	{
-		var store=
-			{
-				services:''
-			}
+		var services;
 
 		//% Services Instantiation
-		store.services=angular.module('application.services',[]);
+		services=angular.module('services',[]);
 		//%
 	}
 )();

@@ -1,29 +1,23 @@
 //% Application
 (function()
 	{
-		var store=
-			{
-				application:''
-			}
+		var application;
 
 		//% Application instantiation
-		store.application=angular.module('application',['angular-md5','ngAnimate','ngRoute','firebase','application.controllers','application.directives','application.services']);
+		application=angular.module('application',['angular-md5','ngAnimate','ngRoute','ngStorage','firebase','controllers','directives','services']);
 		//%
 
 		//% Configuration
-		store.application.config(['$routeProvider',function($routeProvider)
+		application.config(function($routeProvider)
 			{
 				$routeProvider.
-					otherwise(
+					when('/',
 						{
-							redirectTo:function(routeParams,path,search)
-								{
-									return "/";
-								}
+							templateUrl:'/templates/home.html'
 						}
 					);
 			}
-		]);
+		);
 		//%
 
 		//% Bootstrap

@@ -1,8 +1,8 @@
-include /functions/variables
+include /config/variables
 
 block vars
 
-include /functions/mixins
+include /mixins/application-navigation
 
 doctype html
 
@@ -10,40 +10,43 @@ html(class="no-js",lang="en",ng-controller="ApplicationController")
 
 	meta(content="IE=edge,chrome=1",http-equiv="X-UA-Compatible")
 
-	title=product.title
-
 	meta(charset="utf-8")
+
+	title=application.title
 
 	meta(content="#",name="description")
 	meta(content="#",name="author")
 
-	//# Mobile Viewport Scaling
+	//-# Mobile Viewport Scaling
 	meta(content="True",name="HandheldFriendly")
 	meta(content="320",name="MobileOptimized")
 	meta(content="width=device-width,initial-scale=1",name="viewport")
 	meta(content="no",name="user-scalable")
 	meta(content="on",http-equiv="cleartype")
+	//#
 
-	//# Apple Convention Specifics
+	//-# Browser specific
+	//- Icons and data for modern browsers
+	link(href="touch.png",rel="shortcut icon")
 	meta(content="yes",name="apple-mobile-web-app-capable")
 	meta(content="black",name="apple-mobile-web-app-status-bar-style")
-	meta(content=product.title,name="apple-mobile-web-app-title")
-
-	//# Microsoft Convention Specifics
-	meta(content=product.title,name="application-name")
+	meta(content=application.title,name="apple-mobile-web-app-title")
+	meta(content=application.title,name="application-name")
 	meta(content="/browser/msapplication.xml",name="msapplication-config")
+	//-#
 
-	//# Icons
-	link(href="touch.png",rel="shortcut icon")
-
+	//-# Stylesheets
+	//- Source files built and concatenated into a single file
 	link(href="/stylesheets/style.css",rel="stylesheet")
+	//-#
 
-	//# Require JS
+	//-# Modernizr
 	script(src="/dependencies/modernizr/modernizr-build.js")
+	//-#
 
-	//# Live Reload
-	// script.
-	// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+	//-# Live Reload
+	//- script.
+	//- document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 	body
 
@@ -51,28 +54,17 @@ html(class="no-js",lang="en",ng-controller="ApplicationController")
 
 			header.application-header
 
-				a(ng-href="{{application_data.application.twitter_url}}")
-
-					img.application-header__object(ng-src="http://www.gravatar.com/avatar/{{application_data.application.email|gravatar}}?s=150")
-
-				h1.application-header__title
-					| {{application_data.application.title}}
-
-				h2.application-header__title--sub
-					| {{application_data.application.description}}
+				block header
 
 			//-@.header
 
 			main.application-main.rich-text
 
-				.application-content(ng-view)
-
-
-
-				//-@.content
+				block content
 
 			//-@.main
 
 		//-@.application
 
+		//-# Script loading
 		script(src="/scripts/load.js")

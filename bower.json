@@ -11,6 +11,8 @@
     "normalize-css": "latest",
     "angular-md5": "~0.1.7",
     "angularfire": "~0.8.2",
-    "firebase": "~1.0.21"
+    "firebase": "~1.0.21",
+    "ngstorage": "~0.3.0",
+    "firebase-simple-login": "~1.6.3"
   }
 }

@@ -1,0 +1,74 @@
+a(ng-href="{{database_data.application.twitter_url}}")
+
+	img.application-header__object(ng-src="http://www.gravatar.com/avatar/{{storage_data.user_email|gravatar}}?s=150")
+
+input.application-header__title(ng-model="storage_data.user_project_name",placeholder="",type="text",value="{{storage_data.user_project_name}}")
+
+input.application-header__title--sub(ng-model="storage_data.user_project_type",placeholder="",type="text",value="{{storage_data.user_project_type}}")
+
+form.form(ng-controller="UserController")
+
+	.form-header
+
+		.form-header__title
+			| Create account
+
+	//-@.header
+
+	.form-content
+
+		label.form-content__row
+
+			.form-content__enclosure
+
+				span.form-content__title
+					| Email
+
+			//-@.enclosure
+
+			.form-content__enclosure
+
+				input.form__input--field(ng-model="user.email",placeholder="",type="text")
+
+			//-@.enclosure
+
+		//-@.row
+
+		label.form-content__row
+
+			.form-content__enclosure
+
+				span.form-content__title
+					| Password
+
+			//-@.enclosure
+
+			.form-content__enclosure
+
+				input.form__input--field(ng-model="user.password",placeholder="",type="text")
+
+			//-@.enclosure
+
+		//-@.row
+
+		label.form-content__row
+
+			.form-content__enclosure
+
+				button.button(ng-click="createUser(user.email,user.password)")
+					| Create account
+
+			//-@.enclosure
+
+			.form-content__enclosure
+
+				button.button(ng-click="loginUser(user.email,user.password)")
+					| Login
+
+			//-@.enclosure
+
+		//-@.row
+
+	//-@.content
+
+//-@.form
