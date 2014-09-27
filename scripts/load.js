@@ -16,7 +16,8 @@ Modernizr.load(
 		'/dependencies/angular-route/angular-route.min.js',
 		'/dependencies/angular-sanitize/angular-sanitize.min.js',
 		'/dependencies/angular-md5/angular-md5.min.js',
-		'/dependencies/ngstorage/ngStorage.min.js'
+		'/dependencies/ngstorage/ngStorage.min.js',
+		'/scripts/application.js'
 	]
 );
 //#
@@ -32,11 +33,39 @@ Modernizr.load(
 //# Application
 Modernizr.load(
 	[
-		'/scripts/application/controllers/user.js',
-		'/scripts/application/controllers/application.js',
-		'/scripts/application/directives.js',
-		'/scripts/application/services.js',
-		'/scripts/application.js'
+
+	]
+);
+//#
+
+//# Controllers
+Modernizr.load(
+	[
+		'/scripts/application/controllers.js'
+	]
+);
+//#
+
+//# Directives
+Modernizr.load(
+	[
+		'/scripts/application/directives.js'
+	]
+);
+//#
+
+//# Factories
+Modernizr.load(
+	[
+		'/scripts/application/factories.js'
+	]
+);
+//#
+
+//# Services
+Modernizr.load(
+	[
+		'/scripts/application/services.js'
 	]
 );
 //#
