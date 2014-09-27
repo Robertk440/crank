@@ -1,7 +1,7 @@
 //# Directives
 (function()
 	{
-		var directives;
+		var directives={};
 
 		directives=angular.module('directives',[]);
 	}

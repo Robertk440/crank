@@ -17,6 +17,7 @@ Crank provides and you decide what you need, experiment and modify as required.
 * I recommend install Choco so you can have easy access to stuff like Atom
 * Always run Powershell as Admin
 * Install Git and Node to your PATH
+* Check the Sass Globbing set up for notes on caveats that apply to Windows
 
 ## Quick Start
 1. With pre-requites installed - open Terminal or Powershell

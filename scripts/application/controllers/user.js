@@ -10,8 +10,8 @@
 		//% User Controller
 		user.controller('UserController',function($firebase,$firebaseSimpleLogin,$http,$scope)
 			{
-				$scope.user='';
-				$scope.user.email='';
+				$scope.user={};
+				$scope.user.email={};
 
 				//% Create User
 				// Take an email and password and send to Firebase for storing

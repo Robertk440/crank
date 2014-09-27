@@ -1,27 +1,68 @@
 //# Style
 // Import all other required files and libraries
 
-//% Imports
+//# Imports
 // Using Sass Globbing to import files, make sure you install the gem.
 // On Windows Sass Globbing requires *.* syntax to select files. However,
-// I've found Sass Globbing unreliable on Windows so I've included both
-// import patterns.
+// Sass Globbing unreliable on Windows so both import patterns are included.
+
+// Importing base compass library, we pretty much use it
+// all so no need to be selective
 @import "compass";
 
+// Normalise is included by bower
 @import "/dependencies/normalize-css/normalize.css";
 
+//# Config
+// Variables, sprite importing, base styles
 @import "_config/*/*.*";
 @import "_config/*.*";
+
+//# Functions
+// Sass functions that power mixins
 @import "_functions/*.*";
+
+//# Mixins
+// Reusable patterns that power aspects of Crank like columns
+// breakpoints, inline images, keyframes, and low-high dpi sprites
 @import "_mixins/*.*";
+
+//# Utilities
+// Tools for nudging elements - additional marging, backgrounds, centering
 @import "_utilities/*.*";
+
+//# Typography
+// Rich text settings, heading resets, typographical baseline
 @import "_typography/*.*";
+
+//# Media
+// Images, videos, iframes
 @import "_media/*.*";
+
+//# Document
+// Anything applied to the base document
 @import "_document";
+
+//# Blocks
+// Individual aspects of the web application, forms, buttons,
+// lists, tables
 @import "_blocks/*.*";
+
+//# Plugins
+// Styling for JS plugins
 @import "_plugins/*.*";
+
+//# Media Queries
+// Media queries can be included inline with the breakpoint mixin
+// or in here if you prefer to segregate your media queries
 @import "_mediaqueries/*.*";
+
+//# Polyfills
+// Any adjustments required for specific browsers
 @import "_polyfills/*.*";
+
+//# Animations
+// Any seperated keyframe animations, transitions that can be reused
 @import "_animations/*.*";
 
 // @import "_config/_variables/_colours";
