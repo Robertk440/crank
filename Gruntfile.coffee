@@ -33,7 +33,7 @@ module.exports=(grunt)->
 
 		# Image Minification
 		imagemin:
-			all:
+			images:
 				files:[
 					cwd:'images/'
 					dest:'build/images/'
@@ -94,7 +94,7 @@ module.exports=(grunt)->
 
 		# Sync
 		rsync:
-			dist:
+			build:
 				options:
 					dest:'build'
 					src:'./'
@@ -110,13 +110,12 @@ module.exports=(grunt)->
 				files:['browser/*.xml','scripts/application/*.js','data/**/**/**/**/**/*.json','fonts/**']
 				tasks:['rsync']
 
-
 			build:
 				files:['build/stylesheets/**/*.css','build/**/*.html','build/images/**/*','build/scripts/**/*.js']
 				options:
 					livereload:true
 
-			img:
+			images:
 				files:['images/**/*.{jpg,png,jpeg}']
 				tasks:['rsync','imagemin','notify:watch']
 
