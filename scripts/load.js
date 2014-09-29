@@ -7,17 +7,7 @@
 Modernizr.load(
 	[
 		'/dependencies/jquery/dist/jquery.js',
-		'/dependencies/angular/angular.min.js',
-		'/dependencies/firebase/firebase.js',
-		'/dependencies/angularfire/dist/angularfire.min.js',
-		'/dependencies/firebase-simple-login/firebase-simple-login.js',
-		'/dependencies/angular-animate/angular-animate.min.js',
-		'/dependencies/angularfire/dist/angularfire.min.js',
-		'/dependencies/angular-route/angular-route.min.js',
-		'/dependencies/angular-sanitize/angular-sanitize.min.js',
-		'/dependencies/angular-md5/angular-md5.min.js',
-		'/dependencies/ngstorage/ngStorage.min.js',
-		'/scripts/application.js'
+		'/dependencies/angular/angular.min.js'
 	]
 );
 //#
@@ -30,18 +20,11 @@ Modernizr.load(
 );
 //#
 
-//# Application
-Modernizr.load(
-	[
-
-	]
-);
-//#
-
 //# Controllers
 Modernizr.load(
 	[
-		'/scripts/application/controllers.js'
+		'/scripts/application/controllers/application.js',
+		'/scripts/application/controllers/user.js'
 	]
 );
 //#
@@ -49,7 +32,7 @@ Modernizr.load(
 //# Directives
 Modernizr.load(
 	[
-		'/scripts/application/directives.js'
+
 	]
 );
 //#
@@ -57,7 +40,7 @@ Modernizr.load(
 //# Factories
 Modernizr.load(
 	[
-		'/scripts/application/factories.js'
+
 	]
 );
 //#
@@ -65,7 +48,15 @@ Modernizr.load(
 //# Services
 Modernizr.load(
 	[
-		'/scripts/application/services.js'
+
+	]
+);
+//#
+
+//# Application
+Modernizr.load(
+	[
+		'/scripts/application.js'
 	]
 );
 //#

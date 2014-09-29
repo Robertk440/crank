@@ -1,12 +1,14 @@
 //% Application
 (function()
 	{
-		var application={};
-
 		//% Application instantiation
-		application=angular.module('Application',[]);
+		var application=angular.module('Application',['Controllers.Application']);
 		//%
 
-		
+		angular.element(document).ready(function()
+			{
+				angular.bootstrap(document,['Application']);
+			}
+		);
 	}
 )();
