@@ -91,31 +91,6 @@ Crank has been developed with a particular and consistent style.
 	* Typography: Vertical rhythms, rich text areas, paragraphical elements, all styled here
 	* Utilities: Helper classes galore - from background and foreground colours to nudging will margin and padding classes
 
-		//# Button
-		// Those things you click
-		.button
-			{
-				@extend %appearance-none;
-				@extend %block;
-				@extend %display-table;
-
-				background:transparent;border:0;padding:0;
-
-				//% Elem
-				&__title
-					{
-						@extend %display-table-cell;
-						@extend %vertical-align-middle;
-					}
-
-				&__visual
-					{
-						@extend %display-table-cell;
-					}
-				//%
-			}
-
-
 ### JavaScript
 * Modular pattern based on singleton and modular JS structures
 * Private closure based
