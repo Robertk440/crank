@@ -38,9 +38,59 @@ Crank provides and you decide what you need, experiment and modify as required.
 	* Dependencies (created by Bower): All Bower dependencies
 	* Images: Icons, logos, content images
 	* Node_modules (created by NPM): All node dependencies
-	* Scripts: Javascript, Angular focussed but with examples of modular patterns for use
+	* Scripts: JavaScript, Angular focussed but with examples of modular patterns for use
 	* Stylesheets: All Sass, divided by purpose, based on BEM
 	* Views: All Jade, divided by purpose
+
+## Style
+Crank has been developed with a particular and consistent style.
+
+* Tabs! Each consisting of 4 spaces
+* No spaces where they are not needed
+* Indenting that makes it easy to read
+* Alphabetise things where you can, it's the only logical pattern anyone can understand with no other knowledge
+
+### Markup
+* No spaces are used where they are no needed, for instance a meta tag:
+
+	meta(content="black",name="apple-mobile-web-app-status-bar-style")
+	meta(content=application.title,name="apple-mobile-web-app-title")
+	meta(content=application.title,name="application-name")
+
+
+* Comments are used to keep things clear in structure and purpose, closing off blocks for instance
+
+	.application
+
+		header.application-header
+
+			block header
+
+		//-@.header
+
+		main.application-main.rich-text
+
+			block content
+
+		//-@.main
+
+	//-@.application
+
+### Styles
+* Folders dictate purpose, files are broken into small groups, keeping readability and maintainability at the fore
+* Directories:
+	* Animations: Contains reusable keyframe animations and transitions
+	* Blocks: Modules with purpose, columns, buttons, forms, lists, break things down to a purpose to keep them DRY and clean
+	* Config: Configuration variables for other parts of Crank - determines which columns, colours, sprites and helper classes are to be generated
+	* Functions: Functions to perform math for mixins
+	* Media: Videos, images, objects, iframes, style them here
+	* MediaQueries: If you like to keep your media queries seperate to your other markup, or you have specific queries that fit nowhere else, they can go here
+	* Plugins: Have a JS plugin you've created or sourced? Style it here to keep it away from your own styling
+	* Polyfills: Any specific styles for older or less capable browsers
+	* Typography: Vertical rhythms, rich text areas, paragraphical elements, all styled here
+	* Utilities: Helper classes galore - from background and foreground colours to nudging will margin and padding classes
+
+### JavaScript
 
 ## Features
 * AngularJS - Includes a base project structure to build Angular apps
