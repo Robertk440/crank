@@ -32,15 +32,15 @@ Crank provides and you decide what you need, experiment and modify as required.
 ## Important
 * Crank separates source and build. All build files are stored within the generated folder "build"
 * Directories:
-** Browser: Browser specification configuration - for instance xml file for Windows Phone
-** Compass: Compass configuration file
-** Data: Any application JSON you may have stored
-** Dependencies (created by Bower): All Bower dependencies
-** Images: Icons, logos, content images
-** Node_modules (created by NPM): All node dependencies
-** Scripts: Javascript, Angular focussed but with examples of modular patterns for use
-** Stylesheets: All Sass, divided by purpose, based on BEM
-** Views: All Jade, divided by purpose
+	* Browser: Browser specification configuration - for instance xml file for Windows Phone
+	* Compass: Compass configuration file
+	* Data: Any application JSON you may have stored
+	* Dependencies (created by Bower): All Bower dependencies
+	* Images: Icons, logos, content images
+	* Node_modules (created by NPM): All node dependencies
+	* Scripts: Javascript, Angular focussed but with examples of modular patterns for use
+	* Stylesheets: All Sass, divided by purpose, based on BEM
+	* Views: All Jade, divided by purpose
 
 ## Features
 * AngularJS - Includes a base project structure to build Angular apps
