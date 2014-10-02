@@ -53,28 +53,28 @@ Crank has been developed with a particular and consistent style.
 ### Markup
 * No spaces are used where they are no needed, for instance a meta tag:
 
-	meta(content="black",name="apple-mobile-web-app-status-bar-style")
-	meta(content=application.title,name="apple-mobile-web-app-title")
-	meta(content=application.title,name="application-name")
+		meta(content="black",name="apple-mobile-web-app-status-bar-style")
+		meta(content=application.title,name="apple-mobile-web-app-title")
+		meta(content=application.title,name="application-name")
 
 
 * Comments are used to keep things clear in structure and purpose, closing off blocks for instance
 
-	.application
+		.application
 
-		header.application-header
+			header.application-header
 
-			block header
+				block header
 
-		//-@.header
+			//-@.header
 
-		main.application-main.rich-text
+			main.application-main.rich-text
 
-			block content
+				block content
 
-		//-@.main
+			//-@.main
 
-	//-@.application
+		//-@.application
 
 ### Styles
 * Folders dictate purpose, files are broken into small groups, keeping readability and maintainability at the fore
@@ -91,6 +91,10 @@ Crank has been developed with a particular and consistent style.
 	* Utilities: Helper classes galore - from background and foreground colours to nudging will margin and padding classes
 
 ### JavaScript
+* Modular pattern based on singleton and modular JS structures
+* Private closure based
+* Initialisation function utilised as kickstarter
+* Focus on reusability and cleanliness
 
 ## Features
 * AngularJS - Includes a base project structure to build Angular apps
