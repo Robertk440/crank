@@ -49,6 +49,7 @@ Crank has been developed with a particular and consistent style.
 * No spaces where they are not needed
 * Indenting that makes it easy to read
 * Alphabetise things where you can, it's the only logical pattern anyone can understand with no other knowledge
+* Commenting for file description
 
 ### Markup
 * No spaces are used where they are no needed, for instance a meta tag:
@@ -89,6 +90,31 @@ Crank has been developed with a particular and consistent style.
 	* Polyfills: Any specific styles for older or less capable browsers
 	* Typography: Vertical rhythms, rich text areas, paragraphical elements, all styled here
 	* Utilities: Helper classes galore - from background and foreground colours to nudging will margin and padding classes
+
+		//# Button
+		// Those things you click
+		.button
+			{
+				@extend %appearance-none;
+				@extend %block;
+				@extend %display-table;
+
+				background:transparent;border:0;padding:0;
+
+				//% Elem
+				&__title
+					{
+						@extend %display-table-cell;
+						@extend %vertical-align-middle;
+					}
+
+				&__visual
+					{
+						@extend %display-table-cell;
+					}
+				//%
+			}
+
 
 ### JavaScript
 * Modular pattern based on singleton and modular JS structures
