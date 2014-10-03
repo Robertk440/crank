@@ -91,6 +91,102 @@ Crank has been developed with a particular and consistent style.
 	* Typography: Vertical rhythms, rich text areas, paragraphical elements, all styled here
 	* Utilities: Helper classes galore - from background and foreground colours to nudging will margin and padding classes
 
+#### Blocks
+Let's talk about blocks a little more. What is a block? It's a module, it's a group of styles related to
+a group of markup that servers a purpose. Let's construct an example, how about a button - we all need buttons!
+
+It's probable that we'd have some stock ideas for how buttons were constructed so we could have consistent markup.
+Using that mindset, let's construct the base of our button block.
+
+		.button
+
+			@extend %appearance-none;
+			@extend %block;
+			@extend %display-table;
+
+			background:transparent;border:0;padding:0;
+
+			//% Elements
+			&__title
+				{
+					@extend %display-table-cell;
+					@extend %vertical-align-middle;
+				}
+
+			&__visual
+				{
+					@extend %display-table-cell;
+				}
+			//%
+
+		//-@.button
+
+Ok so we've constructed the following generated classes:
+
+* .button
+	* .button__title
+	* .button__visual
+
+The title class will be used to hold our title and the visual can hold an icon, logo, or other visual element
+(note the abstraction, nothing too specific). These selectors are in the style of BEM.
+
+Now, it's also conceivable that we would have an alternative type of button - a modifier on our base style.
+
+Using BEM style syntax, let's do just that.
+
+		.button
+
+			@extend %appearance-none;
+			@extend %block;
+			@extend %display-table;
+
+			background:transparent;border:0;padding:0;
+
+			//% Elements
+			&__title
+				{
+					@extend %display-table-cell;
+					@extend %vertical-align-middle;
+				}
+
+			&__visual
+				{
+					@extend %display-table-cell;
+				}
+			//%
+
+			//% Modifiers
+			&--pill
+				{
+					@extend .button;
+
+					border:{radius:20px;};padding:5px 10px;
+
+					//% Elements
+					&__title
+						{
+							@include float-left;
+						}
+
+					&__visual
+						{
+							@include float-right;
+						}
+					//%
+				}
+			//%
+
+		//-@.button
+
+Notice we've redefined our style within the modifier, this doesn't suffer from inheritance
+but can be easily coerced into benefitting from our base class through extending.
+
+These modified classes would look like:
+
+* .button--pill
+	* .button--pill__title
+	* .button--pill__visual
+
 ### JavaScript
 * Modular pattern based on singleton and modular JS structures
 * Private closure based
@@ -104,7 +200,6 @@ Crank has been developed with a particular and consistent style.
 * Some of the best ideas from SMACSS, MVCSS, and OOCSS, BEMS
 * Local Connect server set up so you don't need to do anything else but develop
 * Configurable. If you need it to include columns for every width, it can, if you want to scale it down, that can be done too!
-
 
 ## Author Information
 * GitHub:[http://github.com/mksanderson/](http://github.com/mksanderson/)
