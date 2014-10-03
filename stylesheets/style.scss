@@ -6,6 +6,11 @@
 // On Windows Sass Globbing requires *.* syntax to select files. However,
 // Sass Globbing unreliable on Windows so both import patterns are included.
 
+//# Compass settings
+$critical-usage-threshold:0.11;
+$graceful-usage-threshold:0.01;
+//
+
 // Importing base compass library, we pretty much use it
 // all so no need to be selective
 @import "compass";
@@ -13,10 +18,10 @@
 // Normalise is included by bower
 @import "/dependencies/normalize-css/normalize.css";
 
-//# Config
+//# Configuration
 // Variables, sprite importing, base styles
-@import "_config/*/*.*";
-@import "_config/*.*";
+@import "_configuration/*/*.*";
+@import "_configuration/*.*";
 
 //# Functions
 // Sass functions that power mixins

@@ -1,8 +1,8 @@
 //# List
-//% General lists, used for anything from navigation to data
+// General lists, used for anything from navigation to data
 .list
 	{
-		//% Blocks
+		//% Nodes
 		&-horizontal
 			{
 				@extend %block;
@@ -17,10 +17,12 @@
 					{
 						@extend %display-inline-block;
 
-						&-item
+						//% Elements
+						&__item
 							{
 								@extend %display-block;
 							}
+						//%
 					}
 				//%
 			}
@@ -37,8 +39,8 @@
 				//% Nodes
 				&-enclosure
 					{
-						//% Nodes
-						&-item
+						//% Elements
+						&__item
 							{
 								@extend %element;
 								@extend %display-block;

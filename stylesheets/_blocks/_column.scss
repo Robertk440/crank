@@ -9,8 +9,8 @@
 		//% Views
 		@include breakpoint("large")
 			{
-				//% Nodes
-				&-large
+				//% Modifiers
+				&--large
 					{
 						@each $i in $columns
 							{
@@ -25,8 +25,8 @@
 
 		@include breakpoint("medium")
 			{
-				//% Nodes
-				&-medium
+				//% Modifiers
+				&--medium
 					{
 						@each $i in $columns
 							{
@@ -41,8 +41,8 @@
 
 		@include breakpoint("small")
 			{
-				//% Nodes
-				&-small
+				//% Modifiers
+				&--small
 					{
 						@each $i in $columns
 							{

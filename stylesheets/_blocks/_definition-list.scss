@@ -4,8 +4,8 @@
 	{
 		@extend %block;
 
-		//% Nodes
-		&-horizontal
+		//% Modifiers
+		&--horizontal
 			{
 				@extend %display-block;
 				@extend %list-style-none;
@@ -18,8 +18,8 @@
 					{
 						@extend %display-inline-block;
 
-						//% Nodes
-						&-item
+						//% Elements
+						&__item
 							{
 								@extend %display-block;
 							}
@@ -28,7 +28,7 @@
 				//%
 			}
 
-		&-vertical
+		&--vertical
 			{
 				@extend %display-block;
 				@extend %list-style-none;
@@ -39,8 +39,8 @@
 				//% Nodes
 				&-term,&-data
 					{
-						//% Nodes
-						&-item
+						//% Elements
+						&__item
 							{
 								@extend %element;
 								@extend %display-block;
