@@ -1,8 +1,10 @@
 //# Floats
 .util
 	{
+		//% Nodes
 		&.float
 			{
+				//% Nodes
 				&-left
 					{
 						@extend %float-left;
@@ -17,5 +19,7 @@
 					{
 						@extend %float-right;
 					}
+				//%
 			}
+		//%
 	}

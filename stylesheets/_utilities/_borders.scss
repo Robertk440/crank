@@ -1,13 +1,10 @@
 //# Borders
 .util
 	{
+		//% Nodes
 		&.border
 			{
-				&-circle
-					{
-						border-radius:50%;
-					}
-
+				//% Modifiers
 				&-radius
 					{
 						@each $i in $borders
@@ -18,5 +15,7 @@
 									}
 							}
 					}
+				//%
 			}
+		//%
 	}

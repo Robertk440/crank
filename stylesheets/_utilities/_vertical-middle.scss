@@ -4,16 +4,15 @@
 	{
 		&.vertical-middle
 			{
-				//% Nodes
 				&:before
 					{
-						@extend %content-none;
 						@extend %display-inline-block;
 						@extend %vertical-align-middle;
 
-						height:100%;margin:{right:-0.25em;};
+						content:"";height:100%;margin:{right:-0.25em;};
 					}
 
+				//% Nodes
 				&-block
 					{
 						@extend %display-inline-block;

@@ -14,7 +14,7 @@
 				//% Elements
 				&__object
 					{
-						@extend .util.border-circle;
+						@extend .util.border-radius-50;
 						@extend .util.block-center;
 						@extend .util.margin-bottom-10;
 
@@ -76,7 +76,7 @@
 
 								&-item
 									{
-										@extend .list-horizontal-enclosure-item;
+										@extend .list-horizontal-enclosure__item;
 										@extend %foreground-color-medium-grey;
 										@extend %font-common-light;
 										@extend %text-align-center;

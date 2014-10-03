@@ -1,5 +1,8 @@
 //# Placeholders
-// For more efficient use of @include directives, relegating a class to be the single point of inclusion of that code to lower repetition
+// For more efficient use of @include directives, relegating
+// a class to be the single point of inclusion of that code to lower repetition.
+// Basically, instead of typing @include display-inline-block or display:inline-block within
+// each selector, just use @extend %display-inline-block.
 @import "compass";
 @import "compass/css3/user-interface";
 
@@ -113,13 +116,6 @@ $box-sizing:content-box,border-box!default;
 	}
 //%
 
-//% Content
-%content-none
-	{
-		content:"";
-	}
-//%
-
 //% Cursor
 $cursor:none,pointer;
 
@@ -152,7 +148,7 @@ $display:none,flex,inline-block,inline,table,table-cell,table-header-group,block
 	}
 //%
 
-//% Flex-grow
+//% Justify content
 $justify-content:flex-start,flex-end,center,space-between,space-around;
 
 @each $property in $justify-content
@@ -176,10 +172,22 @@ $flex-grow:0,1;
 	}
 //%
 
-//% Floats
-$float-type:left,right,none;
+//% Flex-shrink
+$flex-shrink:0,1;
 
-@each $property in $float-type
+@each $property in $flex-shrink
+	{
+		%flex-shrink-#{$property}
+			{
+				@include flex-shrink($property);
+			}
+	}
+//%
+
+//% Floats
+$float:left,right,none;
+
+@each $property in $float
 	{
 		%float-#{$property}
 			{
@@ -378,13 +386,6 @@ $position:absolute,fixed,relative,static;
 			{
 				position:$property;
 			}
-	}
-//%
-
-//% Spread
-%structure
-	{
-		@extend %clearfix;
 	}
 //%
 

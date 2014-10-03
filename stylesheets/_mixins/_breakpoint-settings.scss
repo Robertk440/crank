@@ -1,4 +1,7 @@
 //# Breakpoint Settings
+// Generates classes for use with each breakpoint configured in _breakpoint
+// These are in the format of name-of-breakpoint-settings-classname. For example,
+// large-settings-margin-top-10.
 @mixin breakpoint-settings($breakpoint-settings-name:"none")
 	{
 		@at-root .#{$breakpoint-settings-name}-settings

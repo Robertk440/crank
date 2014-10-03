@@ -1,31 +1,41 @@
 //# Colors
 .util
 	{
+		//% Nodes
 		&.background
 			{
+				//% Nodes
 				&-color
 					{
 						@each $color-name,$color-value in $colors
 							{
+								//% Nodes
 								&-#{$color-name}
 									{
 										@include contrasted($color-value,$dark,$light);
 									}
+								//%
 							}
 					}
+				//%
 			}
 
 		&.foreground
 			{
+				//% Nodes
 				&-color
 					{
 						@each $color-name,$color-value in $colors
 							{
+								//% Nodes
 								&-#{$color-name}
 									{
 										color:$color-value;
 									}
+								//%
 							}
 					}
+				//%
 			}
+		//%
 	}

@@ -3,7 +3,7 @@
 	{
 		@extend %user-select-none;
 
-		//% Block
+		//% Nodes
 		&-interface
 			{
 				@extend %cursor-pointer;
@@ -26,6 +26,7 @@
 						padding:10px;
 					}
 			}
+
 		&-header
 			{
 				@extend %background-color-regular-grey;

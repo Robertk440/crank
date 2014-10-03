@@ -8,6 +8,11 @@
 
 		margin:{left:add-unit-type($margins)};width:column-width($columns,$margins,$percentage);
 
+		&:first-child
+			{
+				margin:{left:0;};width:add-unit-type($percentage,"%");
+			}
+
 		@for $x from 1 through 5
 			{
 				&-#{$x}
@@ -17,11 +22,6 @@
 						margin:{left:add-unit-type($x,"%")};
 						width:column-width($columns,$x,$percentage);
 					}
-			}
-
-		&:first-child
-			{
-				margin:{left:0;};width:add-unit-type($percentage,"%");
 			}
 	}
 //%
