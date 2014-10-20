@@ -1,12 +1,6 @@
 //% Application
 (function()
 	{
-		//% Application instantiation
-		// This is where we pass in all dependancies for the application - from controllers
-		// to ngmodules, they must first be passed in here to be made available.
-		var application=angular.module('Application',['ngRoute','Controllers.Application']);
-		//%
-
 		//% Bootstrapping
 		// We bootstrap the web app here, making sure the document element is ready before we do
 		// so. We then bootstrap it as the generic "Application".
@@ -17,15 +11,28 @@
 		);
 		//%
 
+		//% Application instantiation
+		// This is where we pass in all dependancies for the application - from controllers
+		// to ngmodules, they must first be passed in here to be made available.
+		var application=angular.module('Application',['ngRoute']);
+		//%
+
 		//% Router
+		// Specify actions that occur when a URL is hit - send a template,
+		// or redirect.
 		application.config(function($locationProvider,$routeProvider)
 			{
-				$locationProvider.html5Mode(true);
+				$locationProvider.html5Mode(
+					{
+						enabled:true,
+						requireBase:false
+					}
+				);
 
 				$routeProvider
 					.when('/',
 						{
-							template:'<h1>TEST</h1>'
+							templateUrl:'templates/home.html'
 						}
 					)
 					.otherwise(
