@@ -12,7 +12,7 @@
 
 	//% Icons
 	$icons:sprite-map("icons/*.png",$icons-spacing:5px);
-	$icons-files:"beaker-small-graphite","cloud-small-graphite";
+	$icons-files:"beaker-small-graphite-64","cloud-small-graphite-64";
 	$sprite-icons:sprite-url($icons);
 
 	$icons2x:sprite-map("icons2x/*.png",$icons2x-spacing:10px);
