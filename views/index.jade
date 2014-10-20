@@ -6,7 +6,11 @@ block content
 
 		//% View
 		// Content is rendered within this view, see Angular route configuration
-		// in scripts/application.js
+		// in scripts/application.js. As an example of how this works, the home view
+		// has been set up. Try:
+		// 1. Going to a different URL (localhost:1337/#/test) and you'll see otherwise({redirect}) at work
+		// 2. Adding content to views/templates/home.jade, you'll see it compile to html in build/templates/home.html
+		// 3. Add your own route
 		section(ng-view)
 
 		//%
