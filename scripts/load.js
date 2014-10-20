@@ -7,7 +7,8 @@
 Modernizr.load(
 	[
 		'/dependencies/jquery/dist/jquery.js',
-		'/dependencies/angular/angular.min.js'
+		'/dependencies/angular/angular.min.js',
+		'/dependencies/angular-route/angular-route.min.js'
 	]
 );
 //#
