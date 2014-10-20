@@ -38,11 +38,12 @@
 							{
 								@extend .util.background-color-pitch;
 								@extend %display-block;
+								@extend %font-heading-normal;
 								@extend %text-align-center;
 								@extend %position-relative;
 								@extend %user-select-none;
-								@include adjust-font-size-to(36px);
-								@include adjust-leading-to(1);
+								@include adjust-font-size-to(30px);
+								@include adjust-leading-to(1.2);
 
 								border:0;margin:{top:5px;};width:100%;
 							}
