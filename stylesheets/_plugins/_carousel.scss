@@ -42,12 +42,7 @@
 
 		&-list
 			{
-				@extend .list-horizontal;
-
-				&-enclosure
-					{
-
-					}
+				@extend .list--horizontal;
 			}
 
 		&-main

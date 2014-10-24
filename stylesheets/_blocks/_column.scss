@@ -7,6 +7,8 @@
 		@extend %float-left;
 
 		//% Views
+		// Setting up column sizing across all breakpoints
+		// so that columns can be changed as needed
 		@include breakpoint("large")
 			{
 				//% Modifiers

@@ -20,6 +20,7 @@
 
 						border:10px solid map-get($colors,clarity);
 					}
+
 				&__title
 					{
 						@extend .util.background-color-pitch;
@@ -59,42 +60,37 @@
 
 		&-navigation
 			{
-				margin:{bottom:40px;};
+				@extend %background-color-dark-grey;
+				@extend %text-align-center;
+
+				margin:{bottom:40px;top:20px;};
 
 				//% Nodes
 				&-list
 					{
-						@extend .list-horizontal;
+						@extend .list--horizontal;
 
-						//% Nodes
-						&-enclosure
+						//% Elements
+						&__enclosure
 							{
-								@extend .list-horizontal-enclosure;
+								@extend .list--horizontal__enclosure;
+							}
 
-								margin:{left:50px;};
+						&__item
+							{
+								@extend .list--horizontal__item;
+								@extend %foreground-color-medium-grey;
+								@extend %font-common-light;
+								@extend %text-align-center;
+								@include adjust-font-size-to(32px);
+								@include adjust-leading-to(1);
 
-								&:first-child{margin:{left:0;};}
+								padding:10px;
 
-								&-item
+								&:focus,&:hover
 									{
-										@extend .list-horizontal-enclosure__item;
-										@extend %foreground-color-medium-grey;
-										@extend %font-common-light;
-										@extend %text-align-center;
-										@include adjust-font-size-to(32px);
-										@include adjust-leading-to(1);
+										@extend %background-color-clarity;
 									}
-
-								//% Modifiers
-								&.active
-									{
-										.product-navigation-list-enclosure-item
-											{
-												@extend %foreground-color-clarity;
-												@extend %font-common-light;
-											}
-									}
-								//%
 							}
 						//%
 					}

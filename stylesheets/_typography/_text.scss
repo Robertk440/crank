@@ -163,6 +163,10 @@ h6
 		//% Lists
 		ul,ol,dl
 			{
+				list-style:{position:inside;};margin:{top:20px;};
+
+				&:first-child{margin:{top:0;};}
+
 				li,dt,dd
 					{
 						@include adjust-leading-to(1);

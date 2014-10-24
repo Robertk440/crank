@@ -1,5 +1,10 @@
 //# Button
-// Those things you click
+// Those things you click, tap, touch, hover...
+// The basic structure of buttons has been broken into two parts,
+// a title text class and a object class. The object is usually an icon
+// or some other representation of the title. We've used table cell as the default
+// because this approach allows some of the befits of flex (namely,
+// vertical centering) but has better compatibility across browsers.
 .button
 	{
 		@extend %appearance-none;
@@ -15,7 +20,7 @@
 				@extend %vertical-align-middle;
 			}
 
-		&__visual
+		&__object
 			{
 				@extend %display-table-cell;
 			}

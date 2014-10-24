@@ -13,17 +13,15 @@
 
 				margin:0;padding:0;
 
-				//% Nodes
-				&-term,&-data
+				//% Elements
+				&__item
+					{
+						@extend %display-block;
+					}
+
+				&__term,&__data
 					{
 						@extend %display-inline-block;
-
-						//% Elements
-						&__item
-							{
-								@extend %display-block;
-							}
-						//%
 					}
 				//%
 			}
@@ -37,15 +35,15 @@
 				margin:0;padding:0;
 
 				//% Nodes
-				&-term,&-data
+				&__item
 					{
-						//% Elements
-						&__item
-							{
-								@extend %element;
-								@extend %display-block;
-							}
-						//%
+						@extend %element;
+						@extend %display-block;
+					}
+					
+				&__term,&__data
+					{
+
 					}
 				//%
 			}

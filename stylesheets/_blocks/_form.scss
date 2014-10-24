@@ -1,12 +1,9 @@
 //# Form
 .form
 	{
+		@extend %block;
+		
 		//% Elements
-		&__enclosure
-			{
-				@extend %flex-grow-1;
-			}
-
 		&__input
 			{
 				@extend %display-block;
@@ -26,7 +23,7 @@
 
 		&__row
 			{
-				@extend %display-flex;
+				@extend %display-block;
 
 				margin:{top:10px;};
 

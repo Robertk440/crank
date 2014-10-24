@@ -2,8 +2,10 @@
 // General lists, used for anything from navigation to data
 .list
 	{
-		//% Nodes
-		&-horizontal
+		@extend %block;
+		
+		//% Modifiers
+		&--horizontal
 			{
 				@extend %block;
 				@extend %display-block;
@@ -12,22 +14,20 @@
 
 				margin:0;padding:0;
 
-				//% Nodes
-				&-enclosure
+				//% Elements
+				&__enclosure
 					{
-						@extend %display-inline-block;
+						@extend %float-left;
+					}
 
-						//% Elements
-						&__item
-							{
-								@extend %display-block;
-							}
-						//%
+				&__item
+					{
+						@extend %display-block;
 					}
 				//%
 			}
 
-		&-vertical
+		&--vertical
 			{
 				@extend %block;
 				@extend %display-block;
@@ -36,16 +36,11 @@
 
 				margin:0;padding:0;
 
-				//% Nodes
-				&-enclosure
+				//% Elements
+				&__item
 					{
-						//% Elements
-						&__item
-							{
-								@extend %element;
-								@extend %display-block;
-							}
-						//%
+						@extend %element;
+						@extend %display-block;
 					}
 				//%
 			}

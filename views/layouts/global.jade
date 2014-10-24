@@ -2,7 +2,7 @@ include /config/variables
 
 block vars
 
-include /mixins/application-navigation
+include /mixins/mixins
 
 doctype html
 
@@ -23,7 +23,7 @@ html(class="no-js",lang="en")
 	meta(content="width=device-width,initial-scale=1",name="viewport")
 	meta(content="no",name="user-scalable")
 	meta(content="on",http-equiv="cleartype")
-	//#
+	//-#
 
 	//-# Browser specific
 	//- Icons and data for modern browsers
@@ -66,5 +66,4 @@ html(class="no-js",lang="en")
 
 		//-@.application
 
-		//-# Script loading
 		script(src="/scripts/load.js")

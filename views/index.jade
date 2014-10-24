@@ -8,9 +8,15 @@ block header
 	h2.application-header__title--sub
 		| To get started, look at the code!
 
+	.application-navigation
+
+		mixin list("application-navigation-list","application-navigation-list__enclosure column--large-33","application-navigation-list__item",navigation)
+
+	//-@.navigation
+
 block content
 
-	section.application-content
+	section.application-content.util.text-align-center
 
 		//% View
 		// Content is rendered within this view, see Angular route configuration
