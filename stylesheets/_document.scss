@@ -1,5 +1,10 @@
 //# Document
 // The basic structure of the site, block level elements
+*
+	{
+		@include legacy-pie-clearfix();
+	}
+
 html
 	{
 		@extend %background-color-pitch;
@@ -9,6 +14,6 @@ html
 
 body
 	{
-		
+
 	}
 //

@@ -14,7 +14,7 @@
 		//% Application instantiation
 		// This is where we pass in all dependancies for the application - from controllers
 		// to ngmodules, they must first be passed in here to be made available.
-		var application=angular.module('Application',['ngRoute']);
+		var application=angular.module('Application',['ngRoute','Controllers.Application','Controllers.User']);
 		//%
 
 		//% Router

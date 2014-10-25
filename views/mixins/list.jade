@@ -1,8 +1,8 @@
 //-# List
 //- Render a list with classes for the list, the enclosures and the items
-// Values must be passed in as an array of objects:
-// -var navigation={1:{href:"/",title:"Home"},2:{href:'/something/',sub:{1:{href:"/about/",title:"About"}},title:"About"},3:{href:'/something/',sub:{1:{href:"/about/",title:"About"}},title:"Contact"}}
-// list("list-class","list-class__enclosure","list-class__item",navigation)
+//- Values must be passed in as an array of objects:
+//- -var navigation={1:{href:"/",title:"Home"},2:{href:'/something/',sub:{1:{href:"/about/",title:"About"}},title:"About"},3:{href:'/something/',sub:{1:{href:"/about/",title:"About"}},title:"Contact"}}
+//- list("list-class","list-class__enclosure","list-class__item",navigation)
 mixin list(list,enclosure,item,array)
 	ul(class=list)
 
