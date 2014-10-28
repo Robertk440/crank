@@ -99,7 +99,7 @@ module.exports=(grunt)->
 
 		# Parallel
 		parallel:
-			tasks:
+			development:
 				options:
 					grunt:true
 					stream:true
@@ -155,4 +155,5 @@ module.exports=(grunt)->
 	grunt.registerTask 'default',['compass:build','modernizr','rsync','jade']
 	grunt.registerTask 'deploy',['compass:build','rsync','jade','uglify']
 	grunt.registerTask 'server',['connect','parallel','notify']
+	grunt.registerTask 'test',['jasmine']
 	#
