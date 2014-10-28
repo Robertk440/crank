@@ -1,10 +1,10 @@
-//% Carousel
-//% Fed by JSON
+// Carousel
+// Fed by JSON
 
 var Carousel=(function()
 	{
-		//% Settings
-		//% Stored nodes from the DOM
+		// Function:settings
+		// Stored nodes from the DOM
 		var settings=function()
 			{
 				return{
@@ -60,10 +60,10 @@ var Carousel=(function()
 						}
 				}
 			};
-		//%
+		//
 
-		//% Storage
-		//% Stored data that is changeable
+		// Variable:storage
+		// Stored data that is changeable
 		var storage=
 			{
 				response:
@@ -76,14 +76,17 @@ var Carousel=(function()
 						position:0
 					}
 			};
-		//%
+		//
 
+		// Function:initialise
 		var initialise=function()
 			{
 				settings();
 				request();
 			};
+		//
 
+		// Function:advance
 		var advance=function()
 			{
 				if(storage.state.position<storage.response.measure&&storage.state.position>=0)
@@ -100,7 +103,9 @@ var Carousel=(function()
 						settings().controller.enclosure.dom.eq(storage.state.position).show();
 					}
 			};
+		//
 
+		// Function:interface
 		var interface=function()
 			{
 				settings().controller.enclosure.dom.hide();
@@ -120,7 +125,9 @@ var Carousel=(function()
 					}
 				);
 			};
+		//
 
+		// Function:request
 		var request=function()
 			{
 				$.getJSON(settings().request.url,function(request)
@@ -147,12 +154,16 @@ var Carousel=(function()
 					}
 				);
 			};
+		//
 
+		// Function:reset
 		var reset=function()
 			{
 
 			};
+		//
 
+		// Function:retard
 		var retard=function()
 			{
 				if(storage.state.position<storage.response.measure&&storage.state.position>0)
@@ -175,9 +186,14 @@ var Carousel=(function()
 						settings().controller.enclosure.dom.eq(storage.state.position).show();
 					}
 			};
+		//
 
+		// Return
+		// Set up externally accessible functions. On the left is the accessor
+		// externally, on the right the internal function
 		return{
 				init:initialise
 			};
+		//
 	}
 )();

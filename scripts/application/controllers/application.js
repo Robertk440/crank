@@ -3,9 +3,9 @@
 // and should be used to store appropriately global information.
 (function()
 	{
-		//% Instantiation
+		// Instantiation
 		var controllers=angular.module('Controllers.Application',[]);
-		//%
+		//
 
 		controllers.controller('ApplicationController',function($scope)
 			{

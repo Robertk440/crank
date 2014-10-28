@@ -6,7 +6,7 @@ describe('Addition',function()
 
 		it('Adds two numbers and returns the result',function()
 			{
-				expect(add(num1,num2)).toBe(30);
+				expect(Add(num1,num2)).toBe(30);
 			}
 		);
 	}
@@ -19,7 +19,7 @@ describe('Subtraction',function()
 
 		it('Subtracts one number from another and returns the result',function()
 			{
-				expect(subtract(num1,num2)).toBe(1);
+				expect(Subtract(num1,num2)).toBe(1);
 			}
 		);
 	}

@@ -1,10 +1,10 @@
-//% Accordion
-//% Fed by JSON
+//# Accordion
+// Fed by JSON
 
 var Accordion=(function()
 	{
-		//% Settings
-		//% Stored nodes from the DOM
+		// Function:settings
+		// Stored nodes from the DOM
 		var settings=function()
 			{
 				return{
@@ -40,10 +40,10 @@ var Accordion=(function()
 						}
 				}
 			};
-		//%
+		//
 
-		//% Storage
-		//% Stored data that is changeable
+		// Variable:storage
+		// Stored data that is changeable
 		var storage=
 			{
 				response:
@@ -51,14 +51,17 @@ var Accordion=(function()
 						items:[]
 					}
 			};
-		//%
+		//
 
+		// Function:initialise
 		var initialise=function()
 			{
 				settings();
 				request();
 			};
+		//
 
+		// Function:interface
 		var interface=function()
 			{
 				settings().controller.main.dom.hide();
@@ -78,7 +81,9 @@ var Accordion=(function()
 					}
 				);
 			};
+		//
 
+		// Function:request
 		var request=function()
 			{
 				$.getJSON(settings().request.url,function(request)
@@ -102,13 +107,20 @@ var Accordion=(function()
 					}
 				);
 			};
+		//
 
+		// Function:reset
 		var reset=function()
 			{
 				settings().controller.block.dom.removeClass('active');
 				settings().controller.main.dom.slideUp();
 			};
+		//
 
+		// Function:toggle
+		// @param (DOM element) header
+		// @param (DOM element) block
+		// @param (DOM element) main
 		var toggle=function(header,block,main)
 			{
 				if(block.hasClass('active'))
@@ -125,9 +137,14 @@ var Accordion=(function()
 						block.addClass('active');
 					}
 			};
+		//
 
+		// Return
+		// Set up externally accessible functions. On the left is the accessor
+		// externally, on the right the internal function
 		return{
 				init:initialise
 			};
+		//
 	}
 )();
