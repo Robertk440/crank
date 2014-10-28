@@ -43,6 +43,8 @@ module.exports=(grunt)->
 		#
 
 		# Jade
+		# Front end preprocessing, looks after compiling
+		# all .jade files into .html
 		jade:
 			views:
 				files:
@@ -58,7 +60,19 @@ module.exports=(grunt)->
 					pretty:true
 		#
 
+		# Jasmine
+		# Unit testing for JavaScript
+		jasmine:
+			tests:
+				options:
+					specs:'tests/**/*.js'
+					vendor:['dependencies/jquery/dist/jquery.min.js']
+				src:'scripts/scripts.js'
+
+		#
+
 		# Modernizr
+		# Used for loading scripts
 		modernizr:
 			build:
 				devFile:'dependencies/modernizr/modernizr.js'
