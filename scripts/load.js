@@ -61,3 +61,11 @@ Modernizr.load(
 	]
 );
 //
+
+// Plugins
+Modernizr.load(
+	[
+		'/scripts/plugins/accordion.js'
+	]
+);
+//

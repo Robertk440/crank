@@ -127,6 +127,8 @@ var Accordion=(function()
 					{
 						settings().controller.block.dom.removeClass('active');
 						main.slideUp();
+
+						return false;
 					}
 				else
 					{
@@ -135,6 +137,8 @@ var Accordion=(function()
 
 						settings().controller.block.dom.removeClass('active');
 						block.addClass('active');
+
+						return true;
 					}
 			};
 		//
@@ -143,7 +147,8 @@ var Accordion=(function()
 		// Set up externally accessible functions. On the left is the accessor
 		// externally, on the right the internal function
 		return{
-				init:initialise
+				init:initialise,
+				toggle:toggle
 			};
 		//
 	}

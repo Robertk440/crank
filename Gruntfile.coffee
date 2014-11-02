@@ -65,9 +65,13 @@ module.exports=(grunt)->
 		jasmine:
 			tests:
 				options:
-					specs:'tests/**/*.js'
+					specs:'specs/**/*.js'
 					vendor:['dependencies/jquery/dist/jquery.min.js']
-				src:'scripts/scripts.js'
+				src:
+					[
+						'scripts/plugins/*.js',
+						'scripts/scripts.js'
+					]
 
 		#
 
