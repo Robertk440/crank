@@ -20,7 +20,7 @@
 		var application=angular.module('Application',['ngRoute','Controllers.Application','Controllers.User']);
 		//
 
-		// Router
+		// Configuration
 		// Specify actions that occur when a URL is hit - send a template,
 		// or redirect.
 		application.config(function($locationProvider,$routeProvider)
