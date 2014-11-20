@@ -1,12 +1,12 @@
 //# Accordion
 .accordion
 	{
-		@extend %background-color-clarity;
+		@extend %background-color-lightest-white;
 
 		//% Nodes
 		&-header
 			{
-				@extend %background-color-regular-grey;
+				@extend %background-color-medium-grey;
 
 				padding:10px;
 			}

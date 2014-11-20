@@ -1,11 +1,8 @@
 //# Block Center
-.util
+&.block-center
 	{
-		&.block-center
-			{
-				margin:{left:auto;right:auto;};
+		margin:{left:auto;right:auto;};
 
-				img{margin:{left:auto;right:auto;};}
-			}
+		img{margin:{left:auto;right:auto;};}
 	}
 //%

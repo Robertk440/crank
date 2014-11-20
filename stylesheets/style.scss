@@ -34,7 +34,10 @@ $graceful-usage-threshold:0.01;
 
 //# Utilities
 // Tools for nudging elements - additional marging, backgrounds, centering
-@import "_utilities/*.*";
+.util
+	{
+		@import "_utilities/*.*";
+	}
 
 //# Typography
 // Rich text settings, heading resets, typographical baseline

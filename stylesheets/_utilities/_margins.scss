@@ -2,12 +2,26 @@
 // These are handy to modify one of modules that just need a small change
 // that doesn't warrant a modified module. The classes generated are based on
 // config/utilities
-.util
+&.margin
 	{
-		&.margin
+		//% Nodes
+		&-auto{margin:auto;}
+		//%
+
+		@each $i in $margins
 			{
 				//% Nodes
-				&-auto{margin:auto;}
+				&-#{$i}
+					{
+						margin:add-unit-type($i);
+					}
+				//%
+			}
+
+		&-bottom
+			{
+				//% Nodes
+				&-auto{margin:{bottom:auto;};}
 				//%
 
 				@each $i in $margins
@@ -15,77 +29,60 @@
 						//% Nodes
 						&-#{$i}
 							{
-								margin:add-unit-type($i);
+								margin:{bottom:add-unit-type($i);};
 							}
 						//%
 					}
+			}
 
-				&-bottom
+		&-left
+			{
+				//% Nodes
+				&-auto{margin:{left:auto;};}
+				//%
+
+				@each $i in $margins
 					{
 						//% Nodes
-						&-auto{margin:{bottom:auto;};}
-						//%
-
-						@each $i in $margins
+						&-#{$i}
 							{
-								//% Nodes
-								&-#{$i}
-									{
-										margin:{bottom:add-unit-type($i);};
-									}
-								//%
+								margin:{left:add-unit-type($i);};
 							}
+						//%
 					}
+			}
 
-				&-left
+		&-right
+			{
+				//% Nodes
+				&-auto{margin:{right:auto;};}
+				//%
+
+				@each $i in $margins
 					{
 						//% Nodes
-						&-auto{margin:{left:auto;};}
-						//%
-
-						@each $i in $margins
+						&-#{$i}
 							{
-								//% Nodes
-								&-#{$i}
-									{
-										margin:{left:add-unit-type($i);};
-									}
-								//%
+								margin:{right:add-unit-type($i);};
 							}
+						//%
 					}
+			}
 
-				&-right
+		&-top
+			{
+				//% Nodes
+				&-auto{margin:{top:auto;};}
+				//%
+
+				@each $i in $margins
 					{
 						//% Nodes
-						&-auto{margin:{right:auto;};}
-						//%
-
-						@each $i in $margins
+						&-#{$i}
 							{
-								//% Nodes
-								&-#{$i}
-									{
-										margin:{right:add-unit-type($i);};
-									}
-								//%
+								margin:{top:add-unit-type($i);};
 							}
-					}
-
-				&-top
-					{
-						//% Nodes
-						&-auto{margin:{top:auto;};}
 						//%
-
-						@each $i in $margins
-							{
-								//% Nodes
-								&-#{$i}
-									{
-										margin:{top:add-unit-type($i);};
-									}
-								//%
-							}
 					}
 			}
 	}

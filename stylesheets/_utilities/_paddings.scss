@@ -2,12 +2,26 @@
 // These are handy to modify one of modules that just need a small change
 // that doesn't warrant a modified module. The classes generated are based on
 // config/utilities
-.util
+&.padding
 	{
-		&.padding
+		//% Nodes
+		&-auto{padding:auto;}
+		//%
+
+		@each $i in $paddings
 			{
 				//% Nodes
-				&-auto{padding:auto;}
+				&-#{$i}
+					{
+						padding:add-unit-type($i);
+					}
+				//%
+			}
+
+		&-bottom
+			{
+				//% Nodes
+				&-auto{padding:{bottom:auto;};}
 				//%
 
 				@each $i in $paddings
@@ -15,77 +29,60 @@
 						//% Nodes
 						&-#{$i}
 							{
-								padding:add-unit-type($i);
+								padding:{bottom:add-unit-type($i);};
 							}
 						//%
 					}
+			}
 
-				&-bottom
+		&-left
+			{
+				//% Nodes
+				&-auto{padding:{left:auto;};}
+				//%
+
+				@each $i in $paddings
 					{
 						//% Nodes
-						&-auto{padding:{bottom:auto;};}
-						//%
-
-						@each $i in $paddings
+						&-#{$i}
 							{
-								//% Nodes
-								&-#{$i}
-									{
-										padding:{bottom:add-unit-type($i);};
-									}
-								//%
+								padding:{left:add-unit-type($i);};
 							}
+						//%
 					}
+			}
 
-				&-left
+		&-right
+			{
+				//% Nodes
+				&-auto{padding:{right:auto;};}
+				//%
+
+				@each $i in $paddings
 					{
 						//% Nodes
-						&-auto{padding:{left:auto;};}
-						//%
-
-						@each $i in $paddings
+						&-#{$i}
 							{
-								//% Nodes
-								&-#{$i}
-									{
-										padding:{left:add-unit-type($i);};
-									}
-								//%
+								padding:{right:add-unit-type($i);};
 							}
+						//%
 					}
+			}
 
-				&-right
+		&-top
+			{
+				//% Nodes
+				&-auto{padding:{top:auto;};}
+				//%
+
+				@each $i in $paddings
 					{
 						//% Nodes
-						&-auto{padding:{right:auto;};}
-						//%
-
-						@each $i in $paddings
+						&-#{$i}
 							{
-								//% Nodes
-								&-#{$i}
-									{
-										padding:{right:add-unit-type($i);};
-									}
-								//%
+								padding:{top:add-unit-type($i);};
 							}
-					}
-
-				&-top
-					{
-						//% Nodes
-						&-auto{padding:{top:auto;};}
 						//%
-
-						@each $i in $paddings
-							{
-								//% Nodes
-								&-#{$i}
-									{
-										padding:{top:add-unit-type($i);};
-									}
-								//%
-							}
 					}
 			}
 	}

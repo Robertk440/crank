@@ -4,7 +4,7 @@
 	{
 		@extend %block;
 
-		margin:{left:auto;right:auto;};margin:{top:25vh};max-width:map-get($product,max-width);
+		margin:{left:auto;right:auto;};margin:{top:25vh};max-width:map-get($application,max-width);
 
 		//% Nodes
 		&-header
@@ -18,12 +18,12 @@
 						@extend .util.block-center;
 						@extend .util.margin-bottom-10;
 
-						border:10px solid map-get($colors,clarity);
+						border:10px solid map-get($colors,lightest-white);
 					}
 
 				&__title
 					{
-						@extend .util.background-color-pitch;
+						@extend .util.background-color-darkest-black;
 						@extend %font-heading-thin;
 						@extend %display-block;
 						@extend %text-align-center;
@@ -37,7 +37,7 @@
 						//% Mods
 						&--sub
 							{
-								@extend .util.background-color-pitch;
+								@extend .util.background-color-darkest-black;
 								@extend %display-block;
 								@extend %font-heading-normal;
 								@extend %text-align-center;
@@ -89,7 +89,7 @@
 
 								&:focus,&:hover
 									{
-										@extend %background-color-clarity;
+										@extend %background-color-lightest-white;
 									}
 							}
 						//%

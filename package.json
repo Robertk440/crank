@@ -5,7 +5,7 @@
     "grunt-contrib-connect": "latest",
     "grunt-contrib-imagemin": "latest",
     "grunt-contrib-jade": "latest",
-    "grunt-contrib-jasmine": "^0.8.1",
+    "grunt-contrib-jasmine": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-import": "latest",
     "grunt-modernizr": "latest",

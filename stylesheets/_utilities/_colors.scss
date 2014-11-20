@@ -1,41 +1,39 @@
 //# Colors
-.util
+// Background and foreground helper classes that include contrast settings
+// to adjust any text within a background to be correctly swapped to either light
+// or dark variant to keep it readable.
+&.background
 	{
 		//% Nodes
-		&.background
+		&-color
 			{
-				//% Nodes
-				&-color
+				@each $color-name,$color-value in $colors
 					{
-						@each $color-name,$color-value in $colors
+						//% Nodes
+						&-#{$color-name}
 							{
-								//% Nodes
-								&-#{$color-name}
-									{
-										@include contrasted($color-value,$dark,$light);
-									}
-								//%
+								@include contrasted($color-value,$dark,$light);
 							}
+						//%
 					}
-				//%
 			}
+		//%
+	}
 
-		&.foreground
+&.foreground
+	{
+		//% Nodes
+		&-color
 			{
-				//% Nodes
-				&-color
+				@each $color-name,$color-value in $colors
 					{
-						@each $color-name,$color-value in $colors
+						//% Nodes
+						&-#{$color-name}
 							{
-								//% Nodes
-								&-#{$color-name}
-									{
-										color:$color-value;
-									}
-								//%
+								color:$color-value;
 							}
+						//%
 					}
-				//%
 			}
 		//%
 	}

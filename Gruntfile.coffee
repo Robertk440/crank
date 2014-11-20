@@ -72,7 +72,6 @@ module.exports=(grunt)->
 						'scripts/plugins/*.js',
 						'scripts/scripts.js'
 					]
-
 		#
 
 		# Modernizr
@@ -84,6 +83,7 @@ module.exports=(grunt)->
 					'load':true
 				outputFile:'dependencies/modernizr/modernizr-build.js'
 				uglify:true
+		#
 
 		# Notify
 		notify_hooks:
@@ -125,7 +125,7 @@ module.exports=(grunt)->
 		# Watch
 		watch:
 			application:
-				files:['browser/*.xml','scripts/application/*.js','data/**/**/**/**/**/*.json','fonts/**']
+				files:['browser/*.xml','scripts/application/*.js','data/**/**/*.json','fonts/**']
 				tasks:['rsync']
 
 			build:
@@ -155,7 +155,7 @@ module.exports=(grunt)->
 	#
 
 	# Register Tasks
-	grunt.registerTask 'clean',['compass:build','modernizr','rsync','import','jade','remove']
+	grunt.registerTask 'clean',['compass:build','modernizr','rsync','import','jade']
 	grunt.registerTask 'default',['compass:build','modernizr','rsync','jade']
 	grunt.registerTask 'deploy',['compass:build','rsync','jade','uglify']
 	grunt.registerTask 'server',['connect','parallel','notify']

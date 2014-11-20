@@ -1,25 +1,20 @@
 //# Floats
-.util
+&.float
 	{
 		//% Nodes
-		&.float
+		&-left
 			{
-				//% Nodes
-				&-left
-					{
-						@extend %float-left;
-					}
+				@extend %float-left;
+			}
 
-				&-reset
-					{
-						@extend %reset-float;
-					}
+		&-reset
+			{
+				@extend %reset-float;
+			}
 
-				&-right
-					{
-						@extend %float-right;
-					}
-				//%
+		&-right
+			{
+				@extend %float-right;
 			}
 		//%
 	}

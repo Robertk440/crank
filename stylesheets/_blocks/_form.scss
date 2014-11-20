@@ -2,7 +2,7 @@
 .form
 	{
 		@extend %block;
-		
+
 		//% Elements
 		&__input
 			{
@@ -13,7 +13,7 @@
 				//% Modifiers
 				&--field
 					{
-						@extend .util.background-color-clarity;
+						@extend .util.background-color-lightest-white;
 						@extend %display-block;
 
 						width:100%;
@@ -34,7 +34,8 @@
 		//% Nodes
 		&-header
 			{
-				border:{bottom:1px solid map-get($colors,clarity);};margin:{bottom:10px;};padding:{bottom:10px;};
+				border:{bottom:1px solid map-get($colors,regular-white);};
+				margin:{bottom:10px;};padding:{bottom:10px;};
 
 				//% Elements
 				&__title

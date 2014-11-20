@@ -1,21 +1,16 @@
 //# Borders
-.util
+&.border
 	{
-		//% Nodes
-		&.border
+		//% Modifiers
+		&-radius
 			{
-				//% Modifiers
-				&-radius
+				@each $i in $borders
 					{
-						@each $i in $borders
+						&-#{$i}
 							{
-								&-#{$i}
-									{
-										border-radius:add-unit-type($i);
-									}
+								border-radius:add-unit-type($i);
 							}
 					}
-				//%
 			}
 		//%
 	}
