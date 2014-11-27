@@ -13,6 +13,7 @@
     "grunt-parallel": "latest",
     "grunt-rsync": "latest",
     "jit-grunt": "latest",
+    "load-grunt-config": "^0.16.0",
     "marked": "latest"
   },
   "name": "crank",

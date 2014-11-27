@@ -6,6 +6,7 @@ Crank provides and you decide what you need, experiment and modify as required.
 ## Pre-requisites
 * [Git](http://www.git-scm.org)
 * [NodeJS](http://www.nodejs.org)
+	* Node modules: load-grunt-config (npm i -D load-grunt-config)
 * [Ruby](http://www.ruby.org) (on Windows, install with [rubyinstaller](http://www.rubyinstaller.org))
 	* For a guide on how best to install Ruby on Mac, see [Rails Apps great guide](http://railsapps.github.io/installrubyonrails-mac.html)
 * Ruby Gems: Sass (latest), Compass (1.0), Sass-Globbing
