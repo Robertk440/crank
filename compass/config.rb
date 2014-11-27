@@ -5,7 +5,7 @@ require "sass-globbing"
 
 # Set this to the root of your project when deployed:
 http_path="/"
-css_dir="build/stylesheets"
+css_dir="www/stylesheets"
 sass_dir="stylesheets"
 images_dir="images"
 javascripts_dir="scripts"

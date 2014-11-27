@@ -1,5 +1,5 @@
 {
-  "name": "Crank",
+  "name": "crank",
   "version": "0.1.0",
   "dependencies": {
     "angular": "latest",
@@ -9,10 +9,6 @@
     "jquery": "latest",
     "modernizr": "latest",
     "normalize-css": "latest",
-    "angular-md5": "~0.1.7",
-    "angularfire": "~0.8.2",
-    "firebase": "~1.0.21",
-    "ngstorage": "~0.3.0",
-    "firebase-simple-login": "~1.6.3"
+    "angular-md5": "latest",
   }
 }

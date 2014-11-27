@@ -12,11 +12,10 @@
     "grunt-notify": "latest",
     "grunt-parallel": "latest",
     "grunt-rsync": "latest",
-    "grunt-sync": "latest",
-    "load-grunt-tasks": "latest",
+    "jit-grunt": "latest",
     "marked": "latest"
   },
-  "name": "Crank",
+  "name": "crank",
   "repository": {
     "type": "git",
     "url": "https://github.com/mksanderson/crank"

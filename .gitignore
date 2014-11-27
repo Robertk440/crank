@@ -9,6 +9,7 @@ Thumbs.db
 
 # Node Generated
 build/
+www/
 dependencies
 libraries
 node_modules

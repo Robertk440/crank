@@ -1,11 +1,7 @@
 module.exports=(grunt)->
 
-	# Create load tasks
-	require('load-grunt-tasks')(grunt,
-		{
-
-		}
-	)
+	# Create load tasks using JIT Grunt
+	require('jit-grunt')(grunt)
 	#
 
 	# Grunt Configuration
@@ -13,7 +9,7 @@ module.exports=(grunt)->
 
 		# Compass
 		compass:
-			build:
+			www:
 				options:
 					config:'compass/config.rb'
 			watch:
@@ -26,7 +22,7 @@ module.exports=(grunt)->
 		connect:
 			server:
 				options:
-					base:'build'
+					base:'www'
 					hostname:'*'
 					port:1337
 		#
@@ -36,7 +32,7 @@ module.exports=(grunt)->
 			images:
 				files:[
 					cwd:'images/'
-					dest:'build/images/'
+					dest:'www/images/'
 					expand:true
 					src:['**/*.{png,jpg,jpeg}']
 				]
@@ -50,7 +46,7 @@ module.exports=(grunt)->
 				files:
 					[
 						cwd:'views/'
-						dest:'build'
+						dest:'www'
 						ext:'.html'
 						expand:true
 						src:['**/**/**/**/*.jade']
@@ -77,11 +73,11 @@ module.exports=(grunt)->
 		# Modernizr
 		# Used for loading scripts
 		modernizr:
-			build:
+			www:
 				devFile:'dependencies/modernizr/modernizr.js'
 				extra:
 					'load':true
-				outputFile:'dependencies/modernizr/modernizr-build.js'
+				outputFile:'dependencies/modernizr/modernizr-www.js'
 				uglify:true
 		#
 
@@ -93,7 +89,7 @@ module.exports=(grunt)->
 			watch:
 				options:
 					title:'Task complete'
-					message:'Build files successfully updated'
+					message:'www files successfully updated'
 
 			server:
 				options:
@@ -112,13 +108,13 @@ module.exports=(grunt)->
 
 		# Sync
 		rsync:
-			build:
+			www:
 				options:
-					dest:'build'
+					dest:'www'
 					src:'./'
 			options:
 				delete:true
-				exclude:['build','node_modules','bowerrc','*.html','compass','views','package.json','stylesheets','Gruntfile.coffee','.gitignore','.editorconfig','.DS_Store','bower.json','readme.md','.git','.sass-cache']
+				exclude:['www','node_modules','bowerrc','*.html','compass','views','package.json','stylesheets','Gruntfile.coffee','.gitignore','.editorconfig','.DS_Store','bower.json','readme.md','.git','.sass-cache']
 				recursive:true
 		#
 
@@ -128,8 +124,8 @@ module.exports=(grunt)->
 				files:['browser/*.xml','scripts/application/*.js','data/**/**/*.json','fonts/**']
 				tasks:['rsync']
 
-			build:
-				files:['build/stylesheets/**/*.css','build/**/*.html','build/images/**/*','build/scripts/**/*.js']
+			www:
+				files:['www/stylesheets/**/*.css','www/**/*.html','www/images/**/*','www/scripts/**/*.js']
 				options:
 					livereload:true
 
@@ -148,16 +144,16 @@ module.exports=(grunt)->
 				tasks:['rsync','notify:watch']
 
 			stylesheets:
-				files:['build/stylesheets/style.css']
+				files:['www/stylesheets/style.css']
 				tasks:['notify:watch']
 		#
 
 	#
 
 	# Register Tasks
-	grunt.registerTask 'clean',['compass:build','modernizr','rsync','import','jade']
-	grunt.registerTask 'default',['compass:build','modernizr','rsync','jade']
-	grunt.registerTask 'deploy',['compass:build','rsync','jade','uglify']
+	grunt.registerTask 'clean',['compass:www','modernizr','rsync','import','jade']
+	grunt.registerTask 'default',['compass:www','modernizr','rsync','jade']
+	grunt.registerTask 'deploy',['compass:www','rsync','jade','uglify']
 	grunt.registerTask 'server',['connect','parallel','notify']
 	grunt.registerTask 'test',['jasmine']
 	#
