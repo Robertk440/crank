@@ -1,0 +1,13 @@
+module.exports=
+	views:
+		files:
+			[
+				cwd:'views/'
+				dest:'www'
+				ext:'.html'
+				expand:true
+				src:['**/**/**/**/*.jade']
+			]
+		options:
+			basedir:'views'
+			pretty:true
