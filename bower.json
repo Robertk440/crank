@@ -9,6 +9,6 @@
     "jquery": "latest",
     "modernizr": "latest",
     "normalize-css": "latest",
-    "angular-md5": "latest",
+    "angular-md5": "latest"
   }
 }
