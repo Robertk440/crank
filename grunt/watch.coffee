@@ -1,4 +1,5 @@
 module.exports=
+
 	application:
 		files:['browser/*.xml','scripts/application/*.js','data/**/**/*.json','fonts/**']
 		tasks:['rsync']
@@ -6,6 +7,7 @@ module.exports=
 	www:
 		files:['www/stylesheets/**/*.css','www/**/*.html','www/images/**/*','www/scripts/**/*.js']
 		options:
+			nospawn:true
 			livereload:true
 
 	images:
