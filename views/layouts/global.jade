@@ -6,7 +6,7 @@ include /mixins/mixins
 
 doctype html
 
-html(class="no-js",data-ng-controller="ApplicationController",lang="en")
+html(class="no-js",data-ng-controller="ApplicationController",lang="en",itemscope,itemtype="http://schema.org/Article")
 
 	meta(content="IE=edge,chrome=1",http-equiv="X-UA-Compatible")
 
@@ -34,6 +34,42 @@ html(class="no-js",data-ng-controller="ApplicationController",lang="en")
 	meta(content=application.title,name="application-name")
 	meta(content="/browser/msapplication.xml",name="msapplication-config")
 	//-#
+
+	//-# Schema.org markup for Google+
+	meta(itemprop="name",content="The Name or Title Here")
+	meta(itemprop="description",content="This is the page description")
+	meta(itemprop="image",content="http://www.example.com/image.jpg")
+	//-#
+
+	//-# Twitter Card data
+	meta(name="twitter:card",content="summary_large_image")
+	meta(name="twitter:site",content="@publisher_handle")
+	meta(name="twitter:title",content="Page Title")
+	meta(name="twitter:description",content="Page description less than 200 characters")
+	meta(name="twitter:creator",content="@author_handle")
+	//- Twitter summary card with large image must be at least 280x150px
+	meta(name="twitter:image:src",content="http://www.example.com/image.html")
+	//-#
+
+	//-# Open Graph data
+	meta(property="og:title",content="Title Here")
+	meta(property="og:type",content="article")
+	meta(property="og:url",content="http://www.example.com/")
+	meta(property="og:image",content="http://example.com/image.jpg")
+	meta(property="og:description",content="Description Here")
+	meta(property="og:site_name",content="Site Name, i.e. Moz")
+	meta(property="article:published_time",content="2013-09-17T05:59:00+01:00")
+	meta(property="article:modified_time",content="2013-09-16T19:08:47+01:00")
+	meta(property="article:section",content="Article Section")
+	meta(property="article:tag",content="Article Tag")
+	meta(property="fb:admins",content="Facebook numberic ID")
+	//-#
+	
+	//- Social Meta Tags http://moz.com/blog/meta-data-templates-123
+	//- Twitter Validation Tool https://dev.twitter.com/docs/cards/validation/validator
+	//- Facebook Debugger https://developers.facebook.com/tools/debug
+	//- Google Structured Data Testing Tool http://www.google.com/webmasters/tools/richsnippets
+	//- Pinterest Rich Pins Validator http://developers.pinterest.com/rich_pins/validator/
 
 	//-# Stylesheets
 	//- Source files built and concatenated into a single file
