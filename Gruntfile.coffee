@@ -1,5 +1,7 @@
 module.exports=(grunt)->
 
+	require('time-grunt')(grunt)
+
 	# Create load tasks using JIT Grunt
 	require('load-grunt-config')(grunt,
 		init:true
