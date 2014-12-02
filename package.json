@@ -6,6 +6,7 @@
     "grunt-contrib-imagemin": "latest",
     "grunt-contrib-jade": "latest",
     "grunt-contrib-jasmine": "latest",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "latest",
     "grunt-import": "latest",
     "grunt-modernizr": "latest",

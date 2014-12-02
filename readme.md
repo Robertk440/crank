@@ -9,17 +9,19 @@ Crank provides and you decide what you need, experiment and modify as required.
 	* Node modules: load-grunt-config (npm i -D load-grunt-config)
 * [Ruby](http://www.ruby.org) (on Windows, install with [rubyinstaller](http://www.rubyinstaller.org))
 	* For a guide on how best to install Ruby on Mac, see [Rails Apps great guide](http://railsapps.github.io/installrubyonrails-mac.html)
-* Ruby Gems: Sass (latest), Compass (1.0), Sass-Globbing
+* Ruby Gems: Sass, Compass, Sass-Globbing
 * [Bower](http://www.bower.io)
 
 ## If you're on Mac...
 * I recommend installing Ruby Version Manager (RVM) with AutoLibs enabled so you don't get any conflicts with system Ruby
+* If you experience issues with Node permissions, run:
+	* sudo chown -R `whoami` ~/.npm
+	* sudo chown -R `whoami` /usr/local/lib/node_modules
 
 ## If you're on Windows...
-* I recommend install Choco so you can have easy access to stuff like Atom
 * Always run Powershell as Admin
 * Install Git and Node to your PATH
-* Check the Sass Globbing set up for notes on caveats that apply to Windows
+* There are some caveats that apply to Sass Globbing on Windows, check out stylesheets/style.scss for notes if you're having trouble
 
 ## Quick Start
 1. With pre-requites installed - open Terminal or Powershell
@@ -47,6 +49,7 @@ Crank provides and you decide what you need, experiment and modify as required.
 ## Style
 Crank has been developed with a particular and consistent style.
 
+* (BEM style syntax)[http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/]
 * Tabs! Each consisting of 4 spaces
 * No spaces where they are not needed
 * Indenting that makes it easy to read

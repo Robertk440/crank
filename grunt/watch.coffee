@@ -22,7 +22,7 @@ module.exports=
 
 	scripts:
 		files:['scripts/**/*.js']
-		tasks:['rsync','notify:watch']
+		tasks:['rsync','notify:watch','jshint']
 
 	stylesheets:
 		files:['www/stylesheets/style.css']

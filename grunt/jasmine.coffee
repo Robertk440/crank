@@ -1,7 +1,7 @@
 module.exports=
 	tests:
 		options:
-			specs:'specs/**/*.js'
+			specs:'specs/**/**/*.js'
 			vendor:['dependencies/jquery/dist/jquery.min.js']
 		src:
 			[

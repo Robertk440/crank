@@ -7,12 +7,23 @@ $(document).ready(function()
 );
 
 // Function:example
+// Spec:/specs/example.js
 // Example function documentation
 // @param (type) parameter1
 // @param (type) parameter2
-// Spec:/specs/example.js
-// function example(parameter1,parameter2)
-//	{
-//		return parameter1+parameter2;
-//	}
-//
+var example=function(parameter1,parameter2,operator)
+	{
+		switch(operator)
+			{
+				case '+':
+					var result=parameter1+parameter2;
+					break;
+				case '*':
+					var result=parameter1*parameter2;
+					break;
+				default:
+					var result=parameter1+parameter2;
+			}
+
+		return result
+	}
