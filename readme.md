@@ -15,7 +15,9 @@ Crank provides and you decide what you need, experiment and modify as required.
 ## If you're on Mac...
 * I recommend installing Ruby Version Manager (RVM) with AutoLibs enabled so you don't get any conflicts with system Ruby
 * If you experience issues with Node permissions, run:
+
 		sudo chown -R `whoami` ~/.npm
+
 		sudo chown -R `whoami` /usr/local/lib/node_modules
 
 ## If you're on Windows...
