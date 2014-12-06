@@ -15,7 +15,7 @@ module.exports=
 		tasks:['rsync','imagemin','notify:watch']
 
 	jade:
-		files:['components/*.jade','views/**/*.jade']
+		files:['components/*.jade','markup/**/*.jade']
 		options:
 			livereload:true
 		tasks:['jade','notify:watch']
