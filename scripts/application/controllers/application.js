@@ -4,7 +4,7 @@
 (function()
 	{
 		// Instantiation
-		var controllers=angular.module('Controllers.Application',[]);
+		var controllers=angular.module('Application');
 		//
 
 		controllers.controller('ApplicationController',function($scope)

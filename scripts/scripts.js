@@ -13,17 +13,19 @@ $(document).ready(function()
 // @param (type) parameter2
 var example=function(parameter1,parameter2,operator)
 	{
+		var result;
+
 		switch(operator)
 			{
 				case '+':
-					var result=parameter1+parameter2;
+					result=parameter1+parameter2;
 					break;
 				case '*':
-					var result=parameter1*parameter2;
+					result=parameter1*parameter2;
 					break;
 				default:
-					var result=parameter1+parameter2;
+					result=parameter1+parameter2;
 			}
 
-		return result
-	}
+		return result;
+	};
