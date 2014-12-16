@@ -6,9 +6,7 @@
 // Dependecies
 Modernizr.load(
 	[
-		'/dependencies/angular/angular.min.js',
-		'/dependencies/jquery/dist/jquery.js',
-		'/dependencies/angular-route/angular-route.min.js'
+
 	]
 );
 //
@@ -16,29 +14,12 @@ Modernizr.load(
 // Polyfills
 Modernizr.load(
 	[
-		'//cdn.polyfill.io/v1/polyfill.min.js'
-	]
-);
-//
 
-// Controllers
-Modernizr.load(
-	[
-		'/scripts/application/controllers/application.js',
-		'/scripts/application/controllers/user.js'
 	]
 );
 //
 
 // Directives
-Modernizr.load(
-	[
-
-	]
-);
-//
-
-// Factories
 Modernizr.load(
 	[
 
@@ -57,7 +38,15 @@ Modernizr.load(
 // Application
 Modernizr.load(
 	[
-		'/scripts/application.js'
+
+	]
+);
+//
+
+// Controllers
+Modernizr.load(
+	[
+
 	]
 );
 //
