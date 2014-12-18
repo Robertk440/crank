@@ -4,6 +4,12 @@
 
 application.controller('ApplicationController',function($geolocation,$scope)
 	{
-		console.log($geolocation);
+		$scope.position;
+
+		$geolocation().then(function(position)
+			{
+				$scope.position=position;
+			}
+		);
 	}
 );

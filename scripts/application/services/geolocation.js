@@ -1,7 +1,7 @@
 //# Geolocation
 // Angular wrapper for the HTML5 geolocation API
 
-application.factory('$geolocation',function($q,$window)
+application.service('$geolocation',function($q,$window)
 	{
 		return function()
 			{
@@ -17,13 +17,13 @@ application.factory('$geolocation',function($q,$window)
 							{
 								deferred.resolve(
 									{
-										lat: position.coords.latitude,
-										lng: position.coords.longitude
+										lat:position.coords.latitude,
+										lng:position.coords.longitude
 									}
 								);
 					},deferred.reject);
 			}
-			
+
 			return deferred.promise;
 		};
 	}
