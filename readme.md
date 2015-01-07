@@ -9,7 +9,7 @@ Crank provides and you decide what you need, experiment and modify as required.
 	* Node modules: load-grunt-config (npm i -D load-grunt-config)
 * [Ruby](http://www.ruby.org) (on Windows, install with [rubyinstaller](http://www.rubyinstaller.org))
 	* For a guide on how best to install Ruby on Mac, see [Rails Apps great guide](http://railsapps.github.io/installrubyonrails-mac.html)
-* Ruby Gems: Sass, Compass, Sass-Globbing
+* Ruby Gems: Sass, Compass, Sass-Globbing, Scss-lint
 * [Bower](http://www.bower.io)
 
 ## If you're on Mac...
@@ -26,9 +26,9 @@ Crank provides and you decide what you need, experiment and modify as required.
 * There are some caveats that apply to Sass Globbing on Windows, check out stylesheets/style.scss for notes if you're having trouble
 
 ## Quick Start
-1. With pre-requites installed - open Terminal or Powershell
+1. With pre-requites installed - open a new Terminal or Powershell instance
 2. Move to the location you'd like to clone Crank
-3. Run "git clone https://github.com/mksanderson/crank"
+3. Run "git clone https://github.com/mksanderson/crank" (append a directory name if you want a directory name other than crank)
 4. Cd to the Crank directory
 5. Run "npm i"
 6. Run "bower i"
@@ -49,7 +49,7 @@ Crank provides and you decide what you need, experiment and modify as required.
 	* Views: All Jade, divided by purpose
 
 ## Style
-Crank has been developed with a particular and consistent style.
+Crank has been developed with a particular and consistent style. A lot of this is maintained via SCSS Linting.
 
 * (BEM style syntax)[http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/]
 * Tabs! Each consisting of 4 spaces
