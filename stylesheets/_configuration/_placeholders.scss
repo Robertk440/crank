@@ -216,24 +216,28 @@ $float:left,right,none;
 						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
 						-webkit-text-size-adjust:100%;
 					}
+
 				&-light
 					{
 						font:{family:$font-name;weight:300;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
 						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
 						-webkit-text-size-adjust:100%;
 					}
+
 				&-normal
 					{
 						font:{family:$font-name;weight:400;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
 						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
 						-webkit-text-size-adjust:100%;
 					}
+
 				&-medium
 					{
 						font:{family:$font-name;weight:500;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
 						text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
 						-webkit-text-size-adjust:100%;
 					}
+					
 				&-bold
 					{
 						font:{family:$font-name;weight:600;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
@@ -287,6 +291,55 @@ armenian,georgian,lower-alpha,upper-alpha,none;
 				list-style-type:$property;
 			}
 	}
+
+%list
+	{
+		@extend %block;
+
+		//% Modifiers
+		&--horizontal
+			{
+				@extend %block;
+				@extend %display-block;
+				@extend %list-style-none;
+				@extend %reset-spacing;
+
+				margin:0;padding:0;
+
+				//% Elements
+				&__enclosure
+					{
+						@extend %float-left;
+					}
+
+				&__item
+					{
+						@extend %display-block;
+					}
+				//%
+			}
+
+		&--vertical
+			{
+				@extend %block;
+				@extend %display-block;
+				@extend %list-style-none;
+				@extend %reset-spacing;
+
+				margin:0;padding:0;
+
+				//% Elements
+				&__item
+					{
+						@extend %element;
+						@extend %display-block;
+					}
+				//%
+			}
+		//%
+	}
+//%
+
 
 %no-bullet
 	{

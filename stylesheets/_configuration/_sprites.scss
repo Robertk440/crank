@@ -1,22 +1,22 @@
 //# Sprites
 // Include names of image files to create classes for use
 
-	//% Example
-	// $example:sprite-map("example/*.png",$example-spacing:5px);
-	// $example-files:"name-of-icon-colour-height","another-icon-color-height";
-	// $sprite-example:sprite-url($example);
+//% Example
+// $example:sprite-map("example/*.png",$example-spacing:5px);
+// $example-files:"name-of-icon-colour-height","another-icon-color-height";
+// $sprite-example:sprite-url($example);
 
-	// $example2x:sprite-map("example2x/*.png",$icons2x-spacing:10px);
-	// $sprite-example2x:sprite-url($icons2x);
-	//%
+// $example2x:sprite-map("example2x/*.png",$icons2x-spacing:10px);
+// $sprite-example2x:sprite-url($icons2x);
+//%
 
-	//% Icons
-	$icons:sprite-map("icons/*.png",$icons-spacing:5px);
-	$icons-files:"beaker-small-graphite-64","cloud-small-graphite-64";
-	$sprite-icons:sprite-url($icons);
+//% Icons
+$icons:sprite-map("icons/*.png",$icons-spacing:5px);
+$icons-files:"beaker-small-graphite-64","cloud-small-graphite-64";
+$sprite-icons:sprite-url($icons);
 
-	$icons2x:sprite-map("icons2x/*.png",$icons2x-spacing:10px);
-	$sprite-icons2x:sprite-url($icons2x);
-	//%
+$icons2x:sprite-map("icons2x/*.png",$icons2x-spacing:10px);
+$sprite-icons2x:sprite-url($icons2x);
+//%
 
 //%

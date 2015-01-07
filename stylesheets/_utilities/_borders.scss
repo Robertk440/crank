@@ -8,7 +8,7 @@
 					{
 						&-#{$i}
 							{
-								border-radius:add-unit-type($i);
+								@include border-radius(add-unit-type($i));
 							}
 					}
 			}

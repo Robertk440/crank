@@ -55,98 +55,98 @@ h1,h2,h3,h4,h5,h6
 		@extend %reset-spacing;
 	}
 
-.terra
+%terra
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(42px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.giga
+%giga
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(36px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.mega
+%mega
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(30px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.alpha
+%alpha
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(26px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.beta
+%beta
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(24px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.delta
+%delta
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(22px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.gamma
+%gamma
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(18px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.epsilon
+%epsilon
 	{
+		@extend %reset-spacing;
 		@include adjust-font-size-to(16px);
 		@include adjust-leading-to(1);
-		@extend %reset-spacing;
 	}
 
-.zeta
+%zeta
 	{
-		@include adjust-font-size-to(16px);
-		@include adjust-leading-to(1);
+		@extend %reset-spacing;
 		@extend %text-transform-uppercase;
-		@extend %reset-spacing;
+		@include adjust-font-size-to(16px);
+		@include adjust-leading-to(1);
 	}
 
 h1
 	{
-		@extend .terra;
+		@extend %terra;
 	}
 
 h2
 	{
-		@extend .giga;
+		@extend %giga;
 	}
 
 h3
 	{
-		@extend .mega;
+		@extend %mega;
 	}
 
 h4
 	{
-		@extend .alpha;
+		@extend %alpha;
 	}
 
 h5
 	{
-		@extend .beta;
+		@extend %beta;
 	}
 
 h6
 	{
-		@extend .delta;
+		@extend %delta;
 	}
 //%
 
@@ -169,8 +169,8 @@ h6
 
 				li,dt,dd
 					{
-						@include adjust-leading-to(1);
 						@extend %font-common;
+						@include adjust-leading-to(1);
 					}
 			}
 		//%

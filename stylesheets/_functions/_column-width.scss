@@ -14,7 +14,7 @@
 		// This occurs when outputting columns that are evenly split
 		@if($columns>1)
 			{
-				@return(unquote(($total - (($columns - 1) * $margins)) / $columns + '%'));
+				@return(unquote(($total - (($columns - 1) * $margins)) / $columns + "%"));
 			}
 
 		// Otherwise we output fractional singulars which are percentage values
@@ -24,6 +24,6 @@
 		// to take place
 		@if($columns==1)
 			{
-				@return(unquote($percentage - $margins + '%'));
+				@return(unquote($percentage - $margins + "%"));
 			}
 	}

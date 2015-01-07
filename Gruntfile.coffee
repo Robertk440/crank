@@ -5,7 +5,9 @@ module.exports=(grunt)->
 	# Create load tasks using JIT Grunt
 	require('load-grunt-config')(grunt,
 		init:true
-		jitGrunt:true
+		jitGrunt:
+			staticMappings:
+				scsslint:'grunt-scss-lint'
 	)
 	#
 
@@ -14,5 +16,5 @@ module.exports=(grunt)->
 	grunt.registerTask 'default',['compass:www','modernizr','rsync','jade']
 	grunt.registerTask 'deploy',['compass:www','rsync','jade','uglify']
 	grunt.registerTask 'server',['connect','parallel','notify']
-	grunt.registerTask 'specs',['jasmine']
+	grunt.registerTask 'specs',['jasmine','jshint','scsslint']
 	#

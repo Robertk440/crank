@@ -1,31 +1,69 @@
 //# Print
 @media print
 	{
-		.print-invisible{display:none;}
-		.print-visible{display:block;}
-		
-		//% Reset
-		a,a:visited{text-decoration:underline!important;}
-		abbr[title]:after{content:" (" attr(title) ")";}
-		.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";}
-		pre,blockquote{border:1px solid #999;page-break-inside:avoid;}
-		
-		thead{display:table-header-group;}
+		.print-invisible
+			{
+				display:none;
+			}
 
-		img{max-width:100%!important;}
-		p,h2,h3{orphans:3;widows:3;}
+		.print-visible
+			{
+				display:block;
+			}
+
+		//% Reset
+		a,a:visited
+			{
+				text-decoration:underline!important;
+			}
+
+		pre,blockquote
+			{
+				border:1px solid #999;page-break-inside:avoid;
+			}
+
+		thead
+			{
+				display:table-header-group;
+			}
+
+		img
+			{
+				max-width:100%!important;
+			}
+
+		p,h2,h3
+			{
+				orphans:3;widows:3;
+			}
 		//%
-		
+
 		//% Page Setup
-		@page{margin:1cm;}
-		*{background:transparent!important;color:black!important;
-			text-shadow:none!important;filter:none!important;
-			-ms-filter:none!important;}
+		@page
+			{
+				margin:1cm;
+			}
+
+		*
+			{
+				@include text-shadow(none);
+				
+				background:transparent!important;color:black!important;
+				filter:none!important;
+				-ms-filter:none!important;
+			}
 		//%
 
 		//% Page Breaking
-		img,table,ul,li,dl,dt,dd,tr,td{page-break-inside:avoid;}
-		h1,h2,h3,h4,h5,h6{page-break-after:avoid;}
+		img,table,ul,li,dl,dt,dd,tr,td
+			{
+				page-break-inside:avoid;
+			}
+
+		h1,h2,h3,h4,h5,h6
+			{
+				page-break-after:avoid;
+			}
 		//%
 	}
 //%

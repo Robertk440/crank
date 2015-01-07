@@ -1,29 +1,25 @@
 //# Carousel
 .carousel
 	{
-		@extend %user-select-none;
+		user-select:none;
 
 		//% Nodes
 		&-interface
 			{
-				@extend %cursor-pointer;
+				cursor:pointer;
 
 				&-advance
 					{
 						@extend %background-color-dark-grey;
-						@extend %display-block;
-						@extend %text-align-center;
 
-						padding:10px;
+						display:block;padding:10px;text-align:center;
 					}
 
 				&-retard
 					{
 						@extend %background-color-dark-grey;
-						@extend %display-block;
-						@extend %text-align-center;
 
-						padding:10px;
+						display:block;padding:10px;text-align:center;
 					}
 			}
 
@@ -42,7 +38,7 @@
 
 		&-list
 			{
-				@extend .list--horizontal;
+				@extend %list--horizontal;
 			}
 
 		&-main
@@ -50,7 +46,6 @@
 				&-content
 					{
 						@extend %background-color-dark-grey;
-						@extend .rich-text;
 
 						padding:10px;
 					}

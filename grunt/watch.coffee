@@ -26,4 +26,4 @@ module.exports=
 
 	stylesheets:
 		files:['www/stylesheets/style.css']
-		tasks:['notify:watch']
+		tasks:['scsslint','notify:watch']

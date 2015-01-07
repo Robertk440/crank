@@ -13,6 +13,7 @@
     "grunt-notify": "latest",
     "grunt-parallel": "latest",
     "grunt-rsync": "latest",
+    "grunt-scss-lint": "^0.3.4",
     "jit-grunt": "latest",
     "load-grunt-config": "^0.16.0",
     "marked": "latest",

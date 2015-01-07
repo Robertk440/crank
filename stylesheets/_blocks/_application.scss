@@ -14,30 +14,29 @@
 				//% Elements
 				&__object
 					{
-						@extend .util.border-radius-50;
-						@extend .util.block-center;
-						@extend .util.margin-bottom-10;
+						@include border-radius(50%);
 
-						border:10px solid map-get($colors,lightest-white);
+						border:10px solid map-get($colors,lightest-white);margin:{bottom:10px;left:auto;right:auto;};
 					}
 
 				&__title
 					{
-						@extend .util.background-color-darkest-black;
+						@extend %background-color-darkest-black;
+						@extend %foreground-color-lightest-white;
 						@extend %font-heading-thin;
 						@extend %display-block;
 						@extend %text-align-center;
 						@extend %user-select-none;
-						@extend .util.margin-bottom-10;
 						@include adjust-font-size-to(72px);
 						@include adjust-leading-to(3);
 
-						border:0;width:100%;
+						border:0;margin:{bottom:10px;};width:100%;
 
 						//% Mods
 						&--sub
 							{
-								@extend .util.background-color-darkest-black;
+								@extend %background-color-darkest-black;
+								@extend %foreground-color-lightest-white;
 								@extend %display-block;
 								@extend %font-heading-normal;
 								@extend %text-align-center;
@@ -53,11 +52,6 @@
 				//%
 			}
 
-		&-main
-			{
-
-			}
-
 		&-navigation
 			{
 				@extend %background-color-dark-grey;
@@ -68,17 +62,17 @@
 				//% Nodes
 				&-list
 					{
-						@extend .list--horizontal;
+						@extend %list--horizontal;
 
 						//% Elements
 						&__enclosure
 							{
-								@extend .list--horizontal__enclosure;
+								@extend %list--horizontal__enclosure;
 							}
 
 						&__item
 							{
-								@extend .list--horizontal__item;
+								@extend %list--horizontal__item;
 								@extend %foreground-color-medium-grey;
 								@extend %font-common-light;
 								@extend %text-align-center;

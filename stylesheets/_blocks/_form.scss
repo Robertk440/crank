@@ -6,26 +6,21 @@
 		//% Elements
 		&__input
 			{
-				@extend %display-block;
-
-				width:100%;
+				display:block;width:100%;
 
 				//% Modifiers
 				&--field
 					{
-						@extend .util.background-color-lightest-white;
-						@extend %display-block;
+						@extend %background-color-lightest-white;
 
-						width:100%;
+						display:block;width:100%;
 					}
 				//%
 			}
 
 		&__row
 			{
-				@extend %display-block;
-
-				margin:{top:10px;};
+				display:block;margin:{top:10px;};
 
 				&:first-child{margin:{top:0;};}
 			}
@@ -36,13 +31,6 @@
 			{
 				border:{bottom:1px solid map-get($colors,regular-white);};
 				margin:{bottom:10px;};padding:{bottom:10px;};
-
-				//% Elements
-				&__title
-					{
-
-					}
-				//%
 			}
 		//%
 	}

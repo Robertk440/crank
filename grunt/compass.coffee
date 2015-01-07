@@ -2,8 +2,8 @@ module.exports=
 
 	www:
 		options:
-			config:'compass/config.rb'
+			config:'configuration/compass.rb'
 	watch:
 		options:
-			config:'compass/config.rb'
+			config:'configuration/compass.rb'
 			watch:true
