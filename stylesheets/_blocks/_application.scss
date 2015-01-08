@@ -24,28 +24,23 @@
 						@extend %background-color-darkest-black;
 						@extend %foreground-color-lightest-white;
 						@extend %font-heading-thin;
-						@extend %display-block;
-						@extend %text-align-center;
-						@extend %user-select-none;
 						@include adjust-font-size-to(72px);
 						@include adjust-leading-to(3);
 
-						border:0;margin:{bottom:10px;};width:100%;
+						border:0;display:block;margin:{bottom:10px;};text-align:center;
+						width:100%;
 
 						//% Mods
 						&--sub
 							{
 								@extend %background-color-darkest-black;
 								@extend %foreground-color-lightest-white;
-								@extend %display-block;
 								@extend %font-heading-normal;
-								@extend %text-align-center;
-								@extend %position-relative;
-								@extend %user-select-none;
 								@include adjust-font-size-to(30px);
 								@include adjust-leading-to(1.2);
 
-								border:0;margin:{top:5px;};width:100%;
+								border:0;display:block;margin:{top:5px;};position:relative;
+								text-align:center;width:100%;
 							}
 						//%
 					}
@@ -55,9 +50,8 @@
 		&-navigation
 			{
 				@extend %background-color-dark-grey;
-				@extend %text-align-center;
 
-				margin:{bottom:40px;top:20px;};
+				margin:{bottom:40px;top:20px;};text-align:center;
 
 				//% Nodes
 				&-list
@@ -75,11 +69,10 @@
 								@extend %list--horizontal__item;
 								@extend %foreground-color-medium-grey;
 								@extend %font-common-light;
-								@extend %text-align-center;
 								@include adjust-font-size-to(32px);
 								@include adjust-leading-to(1);
 
-								padding:10px;
+								padding:10px;text-align:center;
 
 								&:focus,&:hover
 									{

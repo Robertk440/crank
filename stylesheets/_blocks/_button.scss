@@ -9,20 +9,18 @@
 	{
 		@extend %appearance-none;
 		@extend %block;
-		@extend %display-table;
 
-		background:transparent;border:0;padding:0;
+		background:transparent;border:0;display:table;padding:0;
 
 		//% Elements
 		&__title
 			{
-				@extend %display-table-cell;
-				@extend %vertical-align-middle;
+				display:table-cell;vertical-align:middle;
 			}
 
 		&__object
 			{
-				@extend %display-table-cell;
+				display:table-cell;
 			}
 		//%
 	}

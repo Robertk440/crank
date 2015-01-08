@@ -4,7 +4,8 @@
 .column
 	{
 		@extend %block;
-		@extend %float-left;
+
+		float:left;
 
 		//% Views
 		// Setting up column sizing across all breakpoints

@@ -2,25 +2,25 @@
 // Generate columns by accepting the number of columns and the size of the margins
 // Utilizes @function columnWidth to generate the width of each column
 // See _functions, columnWidth for explanation of arguments used.
-@mixin columns($columns:0,$margins:0,$percentage:0)
+@mixin columns($columns:0,$margin:0,$percentage:0)
 	{
 		@include float-left;
 
-		margin:{left:add-unit-type($margins)};width:column-width($columns,$margins,$percentage);
+		margin:{left:add-unit-type($margin)};width:column-width($columns,$margin,$percentage);
 
 		&:first-child
 			{
 				margin:{left:0;};width:add-unit-type($percentage,"%");
 			}
 
-		@for $x from 1 through 5
+		@each $i in $margins
 			{
-				&-#{$x}
+				&--#{$i}
 					{
 						@include float-left;
 
-						margin:{left:add-unit-type($x,"%")};
-						width:column-width($columns,$x,$percentage);
+						margin:{left:add-unit-type($i,"%")};
+						width:column-width($columns,$i,$percentage);
 					}
 			}
 	}

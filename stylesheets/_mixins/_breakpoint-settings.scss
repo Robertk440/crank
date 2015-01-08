@@ -8,7 +8,7 @@
 			{
 				&-margin
 					{
-						@for $i from 1 through 10
+						@each $i in $margins
 							{
 								&-#{$i}
 									{
@@ -20,7 +20,7 @@
 							{
 								&-auto{margin:{bottom:auto;};}
 
-								@for $i from 1 through 30
+								@each $i in $margins
 									{
 										&-#{$i}
 											{
@@ -33,7 +33,7 @@
 							{
 								&-auto{margin:{left:auto;};}
 
-								@for $i from 1 through 10
+								@each $i in $margins
 									{
 										&-#{$i}
 											{
@@ -46,7 +46,7 @@
 							{
 								&-auto{margin:{right:auto;};}
 
-								@for $i from 1 through 10
+								@each $i in $margins
 									{
 										&-#{$i}
 											{
@@ -59,74 +59,11 @@
 							{
 								&-auto{margin:{top:auto;};}
 
-								@for $i from 1 through 30
+								@each $i in $margins
 									{
 										&-#{$i}
 											{
 												margin:{top:add-unit-type($i);};
-											}
-									}
-							}
-					}
-
-				&-padding
-					{
-						@for $i from 1 through 10
-							{
-								&-#{$i}
-									{
-										padding:add-unit-type($i);
-									}
-							}
-
-						&-bottom
-							{
-								&-auto{padding:{bottom:auto;};}
-
-								@for $i from 1 through 10
-									{
-										&-#{$i}
-											{
-												padding:{bottom:add-unit-type($i);};
-											}
-									}
-							}
-
-						&-left
-							{
-								&-auto{padding:{left:auto;};}
-
-								@for $i from 1 through 30
-									{
-										&-#{$i}
-											{
-												padding:{left:add-unit-type($i);};
-											}
-									}
-							}
-
-						&-right
-							{
-								&-auto{padding:{right:auto;};}
-
-								@for $i from 1 through 30
-									{
-										&-#{$i}
-											{
-												padding:{right:add-unit-type($i);};
-											}
-									}
-							}
-
-						&-top
-							{
-								&-auto{padding:{top:auto;};}
-
-								@for $i from 1 through 10
-									{
-										&-#{$i}
-											{
-												padding:{top:add-unit-type($i);};
 											}
 									}
 							}

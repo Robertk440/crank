@@ -9,9 +9,7 @@ table,.table
 			{
 				th,td
 					{
-						@extend %text-align-left;
-
-						padding:0;
+						padding:0;text-align:left;
 					}
 			}
 
@@ -19,9 +17,7 @@ table,.table
 			{
 				th
 					{
-						@extend %text-align-left;
-
-						padding:0;
+						padding:0;text-align:left;
 					}
 			}
 	}
