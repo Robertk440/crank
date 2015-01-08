@@ -1,60 +1,16 @@
 //# Load
-// Using Modernizr Load to load additional script files
-// Modernizr Grunt builds out the required file with Load, make sure you run the
-// Default grunt task to generate this. It is created as "moderzir-build.js" in the dependencies/modernizr
+// Using Load.js to load additional script files.
+// These are ordered and set to load in a dependant way.
 
-// Dependecies
-Modernizr.load(
-	[
+load('/dependencies/angular/angular.min.js').then(
+	{
+		libraries:['/dependencies/jquery/dist/jquery.js',
+		'/dependencies/angular-route/angular-route.min.js'],
 
-	]
+		application:['/scripts/application.js'],
+
+		services:['/scripts/application/services/geolocation.js'],
+
+		controllers:['/scripts/application/controllers/application.js']
+	}
 );
-//
-
-// Polyfills
-Modernizr.load(
-	[
-
-	]
-);
-//
-
-// Directives
-Modernizr.load(
-	[
-
-	]
-);
-//
-
-// Services
-Modernizr.load(
-	[
-
-	]
-);
-//
-
-// Application
-Modernizr.load(
-	[
-
-	]
-);
-//
-
-// Controllers
-Modernizr.load(
-	[
-
-	]
-);
-//
-
-// Plugins
-Modernizr.load(
-	[
-		'/scripts/plugins/accordion.js'
-	]
-);
-//

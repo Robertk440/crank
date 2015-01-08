@@ -2,13 +2,11 @@ module.exports=
 
 	application:
 		files:['browser/*.xml','scripts/application/*.js','data/**/**/*.json','fonts/**']
-		tasks:['rsync']
+		tasks:['rsync','notify:watch']
 
-	www:
-		files:['www/stylesheets/**/*.css','www/**/*.html','www/images/**/*','www/scripts/**/*.js']
-		options:
-			nospawn:true
-			livereload:true
+	dependencies:
+		files:['dependencies/**/**/*.js']
+		tasks:['rsync','notify:watch']
 
 	images:
 		files:['images/**/*.{jpg,png,jpeg}']
@@ -22,8 +20,14 @@ module.exports=
 
 	scripts:
 		files:['scripts/**/*.js']
-		tasks:['rsync','notify:watch','jshint']
+		tasks:['rsync','jshint','notify:watch']
 
 	stylesheets:
 		files:['www/stylesheets/style.css']
 		tasks:['scsslint','notify:watch']
+
+	www:
+		files:['www/stylesheets/**/*.css','www/**/*.html','www/images/**/*','www/scripts/**/*.js']
+		options:
+			nospawn:true
+			livereload:true

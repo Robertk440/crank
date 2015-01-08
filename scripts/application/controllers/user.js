@@ -7,9 +7,9 @@ application.controller('UserController',function($http,$scope)
 		$scope.users={};
 		$scope.users.list={};
 		$scope.users.pages={};
-		$scope.users.pages.total;
+		$scope.users.pages.total=0;
 		$scope.users.pages.current=1;
-		$scope.users.pages.returned;
+		$scope.users.pages.returned=0;
 
 		$scope.getUsers=function()
 			{
@@ -20,7 +20,7 @@ application.controller('UserController',function($http,$scope)
 						$scope.users.pages.returned=data.page;
 					}
 				);
-			}
+			};
 
 		$scope.getUsers();
 	}

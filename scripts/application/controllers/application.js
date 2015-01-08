@@ -4,7 +4,7 @@
 
 application.controller('ApplicationController',function($geolocation,$scope)
 	{
-		$scope.position;
+		$scope.position=0;
 
 		$geolocation().then(function(position)
 			{

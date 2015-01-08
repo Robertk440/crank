@@ -1,4 +1,5 @@
 module.exports=
+	
 	www:
 		devFile:'dependencies/modernizr/modernizr.js'
 		extra:

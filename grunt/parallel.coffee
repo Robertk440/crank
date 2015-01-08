@@ -1,5 +1,6 @@
 module.exports=
-	development:
+	
+	source:
 		options:
 			grunt:true
 			stream:true

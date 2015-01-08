@@ -12,9 +12,8 @@ module.exports=(grunt)->
 	#
 
 	# Registered Tasks
-	grunt.registerTask 'clean',['compass:www','modernizr','rsync','import','jade']
-	grunt.registerTask 'default',['compass:www','modernizr','rsync','jade']
-	grunt.registerTask 'deploy',['compass:www','rsync','jade','uglify']
+	grunt.registerTask 'clean',['compass:www','rsync','import','jade']
+	grunt.registerTask 'default',['compass:www','rsync','jade']
 	grunt.registerTask 'server',['connect','parallel','notify']
 	grunt.registerTask 'specs',['jasmine','jshint','scsslint']
 	#

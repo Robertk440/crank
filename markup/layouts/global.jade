@@ -76,8 +76,10 @@ html(class="no-js",data-ng-controller="ApplicationController",itemtype="http://s
 	link(href="/stylesheets/style.css",rel="stylesheet")
 	//-#
 
-	//-# Modernizr
-	script(src="/dependencies/modernizr/modernizr-build.js")
+	//-# Javascript
+	//- Load javascript files asynchonously with load.js
+	script(src="/dependencies/load.js/load.min.js")
+	script(src="/scripts/load.js")
 	//-#
 
 	//-# Live Reload
@@ -101,15 +103,3 @@ html(class="no-js",data-ng-controller="ApplicationController",itemtype="http://s
 			//-@.main
 
 		//-@.application
-		
-		script(src="//cdn.polyfill.io/v1/polyfill.min.js")
-		
-		script(src="/dependencies/angular/angular.min.js")
-		script(src="/dependencies/jquery/dist/jquery.js")
-		script(src="/dependencies/angular-route/angular-route.min.js")
-		
-		script(src="/scripts/application.js")
-		
-		script(src="/scripts/application/services/geolocation.js")
-		
-		script(src="/scripts/application/controllers/application.js")

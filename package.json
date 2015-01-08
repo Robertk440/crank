@@ -6,23 +6,23 @@
     "grunt-contrib-imagemin": "latest",
     "grunt-contrib-jade": "latest",
     "grunt-contrib-jasmine": "latest",
-    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-jshint": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-import": "latest",
     "grunt-modernizr": "latest",
     "grunt-notify": "latest",
     "grunt-parallel": "latest",
     "grunt-rsync": "latest",
-    "grunt-scss-lint": "^0.3.4",
+    "grunt-scss-lint": "latest",
     "jit-grunt": "latest",
-    "load-grunt-config": "^0.16.0",
+    "load-grunt-config": "latest",
     "marked": "latest",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "latest"
   },
   "name": "crank",
   "repository": {
     "type": "git",
     "url": "https://github.com/mksanderson/crank"
   },
-  "version": "0.1.0"
+  "version": "1.0.0"
 }

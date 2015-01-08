@@ -1,4 +1,5 @@
 module.exports=
+
 	server:
 		options:
 			base:'www'

@@ -1,4 +1,5 @@
 module.exports=
+
 	images:
 		files:[
 			cwd:'images/'
