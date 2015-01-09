@@ -16,7 +16,7 @@
 					{
 						@include border-radius(50%);
 
-						border:10px solid map-get($colors,lightest-white);margin:{bottom:10px;left:auto;right:auto;};
+						border:5px solid map-get($colors,lightest-white);margin:{bottom:10px;left:auto;right:auto;};
 					}
 
 				&__title

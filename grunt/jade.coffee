@@ -3,12 +3,12 @@ module.exports=
 	views:
 		files:
 			[
-				cwd:'markup'
+				cwd:'source/markup'
 				dest:'www'
 				ext:'.html'
 				expand:true
 				src:['**/**/**/**/*.jade']
 			]
 		options:
-			basedir:'markup'
+			basedir:'source/markup'
 			pretty:true

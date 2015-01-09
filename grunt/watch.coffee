@@ -1,30 +1,30 @@
 module.exports=
 
 	application:
-		files:['browser/*.xml','scripts/application/*.js','data/**/**/*.json','fonts/**']
+		files:['source/browser/*.xml','source/scripts/application/*.js','source/data/**/**/*.json','source/fonts/**']
 		tasks:['rsync','notify:watch']
 
 	dependencies:
-		files:['dependencies/**/**/*.js']
+		files:['source/dependencies/**/**/*.js']
 		tasks:['rsync','notify:watch']
 
 	images:
-		files:['images/**/*.{jpg,png,jpeg}']
+		files:['source/images/**/*.{jpg,png,jpeg}']
 		tasks:['rsync','imagemin','notify:watch']
 
 	jade:
-		files:['components/*.jade','markup/**/*.jade']
+		files:['source/markup/**/*.jade']
 		options:
 			livereload:true
 		tasks:['jade','notify:watch']
 
 	scripts:
-		files:['scripts/**/*.js']
-		tasks:['rsync','jshint','notify:watch']
+		files:['source/scripts/**/*.js']
+		tasks:['rsync','notify:watch']
 
 	stylesheets:
 		files:['www/stylesheets/style.css']
-		tasks:['scsslint','notify:watch']
+		tasks:['notify:watch']
 
 	www:
 		files:['www/stylesheets/**/*.css','www/**/*.html','www/images/**/*','www/scripts/**/*.js']

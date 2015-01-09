@@ -5,11 +5,5 @@
 application.controller('ApplicationController',function($geolocation,$scope)
 	{
 		$scope.position=0;
-
-		$geolocation().then(function(position)
-			{
-				$scope.position=position;
-			}
-		);
 	}
 );

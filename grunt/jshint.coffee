@@ -1,8 +1,8 @@
 module.exports=
 
-	application:'scripts/application.js'
-	controllers:'scripts/application/controllers/*.js'
-	services:'scripts/application/services/*.js'
+	application:'source/scripts/application.js'
+	controllers:'source/scripts/application/controllers/*.js'
+	services:'source/scripts/application/services/*.js'
 
 	options:
 		jshintrc:true

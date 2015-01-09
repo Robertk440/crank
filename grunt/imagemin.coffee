@@ -2,7 +2,7 @@ module.exports=
 
 	images:
 		files:[
-			cwd:'images/'
+			cwd:'source/images/'
 			dest:'www/images/'
 			expand:true
 			src:['**/*.{png,jpg,jpeg}']
