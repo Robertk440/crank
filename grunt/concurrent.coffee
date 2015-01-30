@@ -1,7 +1,6 @@
 module.exports=
-	
+
 	source:
 		options:
-			grunt:true
-			stream:true
+			logConcurrentOutput:true
 		tasks:['compass:watch','watch']
