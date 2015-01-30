@@ -4,17 +4,17 @@
 		//% Nodes
 		&-left
 			{
-				@extend %float-left;
+				@include float-left;
 			}
 
 		&-reset
 			{
-				@extend %reset-float;
+				@include reset-float;
 			}
 
 		&-right
 			{
-				@extend %float-right;
+				@include float-right;
 			}
 		//%
 	}

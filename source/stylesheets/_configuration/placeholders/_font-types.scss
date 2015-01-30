@@ -1,0 +1,46 @@
+//% Font types
+@each $font-type,$font-name in $fonts
+{
+	%font-#{$font-type}
+	{
+		font:{family:$font-name;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+		text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+		-webkit-text-size-adjust:100%;
+
+		&-thin
+		{
+			font:{family:$font-name;weight:100;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+			text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+
+		&-light
+		{
+			font:{family:$font-name;weight:300;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+			text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+
+		&-normal
+		{
+			font:{family:$font-name;weight:400;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+			text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+
+		&-medium
+		{
+			font:{family:$font-name;weight:500;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+			text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+
+		&-bold
+		{
+			font:{family:$font-name;weight:600;};-webkit-font-smoothing:antialiased;font-smoothing:antialiased;
+			text-rendering:optimizeLegibility;-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+	}
+}
+//%

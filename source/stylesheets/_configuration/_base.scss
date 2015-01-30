@@ -1,25 +1,24 @@
 //# HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 ::-moz-selection
 	{
-		@extend %text-shadow-none;
+		text-shadow:none;
 	}
 
 ::selection
 	{
-		@extend %text-shadow-none;
+		text-shadow:none;
 	}
 
 hr
 	{
-		@extend %display-block;
 		@extend %reset-spacing;
 
-		border:{top:1px solid;};height:1px;
+		border:{top:1px solid;};display:block;height:1px;
 	}
 
 audio,canvas,img,svg,video
 	{
-		@extend %vertical-align-middle;
+		vertical-align:middle;
 	}
 
 fieldset
@@ -35,28 +34,30 @@ textarea{resize:vertical;}
 //% All
 *
 	{
-		@extend %box-sizing-border-box;
+		@include box-sizing("border-box");
 	}
 //%
 
 //% Definition Lists
 dl
 	{
-		@extend %element;
+		@extend %block;
 
 		margin:0 0 20px 0;padding:0;
 
 		dt
 			{
-				@extend %element;
-				@extend %display-block;
+				@extend %block;
 				@extend %reset-spacing;
+
+				display:block;
 			}
 		dd
 			{
-				@extend %element;
-				@extend %display-block;
+				@extend %block;
 				@extend %reset-spacing;
+
+				display:block;
 			}
 	}
 //%
@@ -74,14 +75,14 @@ hr
 //% Ordered Lists
 ol
 	{
-		@extend %element;
+		@extend %block;
 
 		margin:0 0 20px 0;padding:0;
 
 		li
 			{
 				//% Extension
-				@extend %element;
+				@extend %block;
 				@extend %reset-spacing;
 				//%
 			}
@@ -91,13 +92,13 @@ ol
 //% Unordered Lists
 ul
 	{
-		@extend %element;
+		@extend %block;
 
 		margin:0 0 20px 0;padding:0;
 
 		li
 			{
-				@extend %element;
+				@extend %block;
 				@extend %reset-spacing;
 			}
 	}
@@ -106,20 +107,18 @@ ul
 //% Forms
 label,legend,select
 	{
-		@extend %display-block;
+		display:block;
 	}
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button
 	{
-		@extend %appearance-none;
+		@include appearance("none");
 	}
 
 textarea
 	{
-		@extend %vertical-align-top;
-
-		overflow:auto;
+		overflow:auto;vertical-align:top;
 	}
 
 
@@ -163,9 +162,8 @@ input[type="checkbox"]:focus
 //% IFrames
 iframe
 	{
-		@extend %element;
-		@extend %display-block;
+		@extend %block;
 
-		border:0;min-height:500px;width:100%;
+		border:0;display:block;min-height:500px;width:100%;
 	}
 //%

@@ -7,9 +7,9 @@
 // vertical centering) but has better compatibility across browsers.
 .button
 	{
-		@extend %appearance-none;
 		@extend %block;
-
+		@include appearance("none");
+		
 		background:transparent;border:0;display:table;padding:0;
 
 		//% Elements

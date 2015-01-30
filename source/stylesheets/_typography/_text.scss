@@ -10,14 +10,15 @@ p
 //% Anchors
 a
 	{
-		@extend %element;
-		@extend %text-decoration-none;
+		@extend %block;
+
+		text-decoration:none;
 
 		color:inherit;
 
 		&:focus,&:hover
 			{
-				@extend %text-decoration-none;
+				text-decoration:none;
 			}
 	}
 //%
@@ -25,9 +26,7 @@ a
 //% Emphasise
 b
 	{
-		@extend %font-weight-bold;
-
-		color:inherit;font:{family:inherit;size:inherit;};
+		color:inherit;font:{family:inherit;size:inherit;weight:bold;};
 	}
 
 em
@@ -42,9 +41,7 @@ i
 
 strong
 	{
-		@extend %font-weight-bold;
-
-		color:inherit;font:{family:inherit;size:inherit;};
+		color:inherit;font:{family:inherit;size:inherit;weight:bold;};
 	}
 //%
 
@@ -114,9 +111,10 @@ h1,h2,h3,h4,h5,h6
 %zeta
 	{
 		@extend %reset-spacing;
-		@extend %text-transform-uppercase;
 		@include adjust-font-size-to(16px);
 		@include adjust-leading-to(1);
+
+		text-transform:uppercase;
 	}
 
 h1
@@ -156,7 +154,7 @@ h6
 		//% Anchors
 		a
 			{
-				@extend %text-decoration-underline;
+				text-decoration:underline;
 			}
 		//%
 

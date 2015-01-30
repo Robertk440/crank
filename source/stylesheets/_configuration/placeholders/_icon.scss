@@ -1,0 +1,13 @@
+//% Icon
+%icon
+	{
+		@include clearfix;
+		
+		display:block;
+
+		&:focus,&:hover
+			{
+				text-decoration:none;
+			}
+	}
+//%

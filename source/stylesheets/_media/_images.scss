@@ -1,7 +1,5 @@
 //# Images
 img
 	{
-		@extend %display-block;
-
-		image-rendering:-webkit-optimize-contrast;
+		display:block;image-rendering:-webkit-optimize-contrast;
 	}

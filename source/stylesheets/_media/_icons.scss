@@ -5,10 +5,11 @@
 			{
 				&.#{$icon}
 					{
-						@extend %display-block;
-						@extend %media;
-						@extend %text-hide;
+						@extend %block;
+						@include hide-text;
 						@include spritee($icon,$icons,$icons2x);
+
+						display:block;
 					}
 			}
 	}

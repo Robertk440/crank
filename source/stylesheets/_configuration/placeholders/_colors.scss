@@ -1,0 +1,37 @@
+//# Placeholders
+// For more efficient use of @include directives, relegating
+// a class to be the single point of inclusion of that code to lower repetition.
+// Basically, instead of typing @include display-inline-block or display:inline-block within
+// each selector, just use @extend %display-inline-block.
+@import "compass";
+@import "compass/css3/user-interface";
+
+//% Colours
+%background
+	{
+		&-color
+			{
+				@each $color-name,$color-value in $colors
+					{
+						&-#{$color-name}
+							{
+								@include contrasted($color-value,$dark,$light);
+							}
+					}
+			}
+	}
+
+%foreground
+	{
+		&-color
+			{
+				@each $color-name,$color-value in $colors
+					{
+						&-#{$color-name}
+							{
+								color:$color-value;
+							}
+					}
+			}
+	}
+//%

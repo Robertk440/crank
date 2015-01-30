@@ -6,70 +6,28 @@
 	{
 		@at-root .#{$breakpoint-settings-name}-settings
 			{
-				&-margin
+				.column
 					{
-						@each $i in $margins
-							{
-								&-#{$i}
-									{
-										margin:add-unit-type($i);
-									}
-							}
+						@include float-left;
 
-						&-bottom
+						@include breakpoint("large")
 							{
-								&-auto{margin:{bottom:auto;};}
-
-								@each $i in $margins
+								//% Modifiers
+								&--large
 									{
-										&-#{$i}
+										@each $i in $columns
 											{
-												margin:{bottom:add-unit-type($i);};
+												&-#{$i}
+												{
+													@include columns(1,0,$i);
+												}
 											}
 									}
-							}
-
-						&-left
-							{
-								&-auto{margin:{left:auto;};}
-
-								@each $i in $margins
-									{
-										&-#{$i}
-											{
-												margin:{left:add-unit-type($i);};
-											}
-									}
-							}
-
-						&-right
-							{
-								&-auto{margin:{right:auto;};}
-
-								@each $i in $margins
-									{
-										&-#{$i}
-											{
-												margin:{right:add-unit-type($i);};
-											}
-									}
-							}
-
-						&-top
-							{
-								&-auto{margin:{top:auto;};}
-
-								@each $i in $margins
-									{
-										&-#{$i}
-											{
-												margin:{top:add-unit-type($i);};
-											}
-									}
+								//%
 							}
 					}
 
-				&-center
+				&-horizontal-middle
 					{
 						@include reset-float;
 
@@ -83,7 +41,7 @@
 							}
 					}
 
-				&-expand
+				&-full-width
 					{
 						@include reset-float;
 

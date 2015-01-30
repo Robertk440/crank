@@ -4,17 +4,17 @@
 	{
 		&:before
 			{
-				@extend %display-inline-block;
-				@extend %vertical-align-middle;
+				@include inline-block;
 
-				content:"";height:100%;margin:{right:-0.25em;};
+				content:"";height:100%;margin:{right:-0.25em;};vertical-align:middle;
 			}
 
 		//% Elements
 		&__enclosure
 			{
-				@extend %display-inline-block;
-				@extend %vertical-align-middle;
+				@include inline-block;
+
+				vertical-align:middle;
 			}
 		//%
 	}

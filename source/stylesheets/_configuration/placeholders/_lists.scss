@@ -1,0 +1,87 @@
+//% Lists
+%definition-list
+{
+	@extend %block;
+
+	//% Modifiers
+	&--horizontal
+		{
+			@include list-style("none");
+			@extend %reset-spacing;
+
+			display:block;margin:0;padding:0;
+
+			//% Elements
+			&__item
+				{
+					display:block;
+				}
+
+			&__term,&__data
+				{
+					@include inline-block;
+				}
+			//%
+		}
+
+	&--vertical
+		{
+			@include list-style("none");
+			@extend %reset-spacing;
+
+			display:block;margin:0;padding:0;
+
+			//% Nodes
+			&__item
+				{
+					display:block;
+				}
+			//%
+		}
+	//%
+}
+
+%list
+	{
+		@extend %block;
+
+		//% Modifiers
+		&--horizontal
+			{
+				@extend %block;
+				@extend %reset-spacing;
+				@include inline-block;
+
+				display:block;margin:0;padding:0;
+
+				//% Elements
+				&__enclosure
+					{
+						@include float-left;
+					}
+
+				&__item
+					{
+						display:block;
+					}
+				//%
+			}
+
+		&--vertical
+			{
+				@extend %block;
+				@extend %reset-spacing;
+				@include list-style("none");
+
+				display:block;margin:0;padding:0;
+
+				//% Elements
+				&__item
+					{
+						display:block;
+					}
+				//%
+			}
+		//%
+	}
+//%
